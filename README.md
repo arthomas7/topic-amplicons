@@ -1,4 +1,4 @@
-# TOPIC: Functional Annotation
+# TOPIC: Amplicons
 A repository for the lessons and tutorials for the Amplicons TOPIC channel of the [BVCN](https://biovcnet.github.io/)
 
 
@@ -10,8 +10,8 @@ A repository for the lessons and tutorials for the Amplicons TOPIC channel of th
 This BVCN topic will cover:
 
 * the different approaches for analyzing amplicon data
-* how to construct count tables, alignment files, and extract taxonomy
-* how to analyze amplicon count data
+* how to construct count tables, alignment files, and extract taxonomy from sequencing files
+* statistical and data visualization techniques for analyzing amplicon data
 
 # Lesson 1
 ### Title: Intro to Amplicons
