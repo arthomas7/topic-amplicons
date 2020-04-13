@@ -23,8 +23,7 @@ Goals
 
 [Watch the lesson](https://www.youtube.com/watch?v=XDdmSb2BvqY&feature=youtu.be)
 
-
-Access the presentation [here]()
+Access the presentation [here](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson01/AmpliconsLesson1.pdf)
 
 
 
