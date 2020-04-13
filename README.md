@@ -21,7 +21,7 @@ Goals
 * What are the different pipelines for processing amplicon data?
 * What are the available methods for producing count tables?
 
-[Watch the lesson]()
+[Watch the lesson](https://www.youtube.com/watch?v=XDdmSb2BvqY&feature=youtu.be)
 
 
 Access the presentation [here]()
