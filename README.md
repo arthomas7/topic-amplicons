@@ -50,13 +50,25 @@ Or just view the discussion on particular questions:
   * [Edgar 2017](https://peerj.com/articles/3889/): Evidence that 97% clustering falsely inflates singletons
 
 * [Have there been any recent advances for getting enough DNA from low biomass samples?](https://youtu.be/egkCswqQMWM?t=1313)
-  * Some kit options:
-   * 50ng input: [KAPA HyperPlus Kits, Roche](https://sequencing.roche.com/en/products-solutions/by-category/library-preparation/dna-library-preparation/kapa-hyperplus.html )
-   * 1ng input: [Nextera XT DNA Library Preparation Kit, Illumina](https://emea.illumina.com/products/by-type/sequencing-kits/library-prep-kits/nextera-xt-dna.html)
+  * Some kit options for [50ng input](https://sequencing.roche.com/en/products-solutions/by-category/library-preparation/dna-library-preparation/kapa-hyperplus.html ) and [1ng input](https://emea.illumina.com/products/by-type/sequencing-kits/library-prep-kits/nextera-xt-dna.html)
   * It's important to account for contamination when working with low biomass! A [blog post](https://rosekantor.github.io/blog/2020-04-11-decontaminating-amplicon-seq-data) from Rose Kantor's website.
-  * 
   
 
 * [What kind of server do you use for running your amplicon pipeline?](https://youtu.be/egkCswqQMWM?t=1478)
 
 * [What does your typical amplicon workflow look like?](https://youtu.be/egkCswqQMWM?t=1679)
+
+* [Is there a difference between calling DADA2 in Qiime2 vs calling it on its own?](https://youtu.be/egkCswqQMWM?t=2106)
+
+* [Which interface do you use for running your code?](https://youtu.be/egkCswqQMWM?t=2196)
+
+* [How do you manage and store your data?](https://youtu.be/egkCswqQMWM?t=2426)
+ * [SRA](https://www.ncbi.nlm.nih.gov/sra)
+ * [Figshare](https://figshare.com/)
+ * [Dryad](https://datadryad.org/stash)
+ * [github](https://github.com/) repository
+ * Zenodo[https://zenodo.org/]
+ * [OSF](https://osf.io/)
+ 
+* [How do you treat your count tables to account for the way that high throughput sequencing ‘collects’ data (ie. as relative abundances rather than absolute counts)?](https://youtu.be/egkCswqQMWM?t=2908)
+
