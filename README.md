@@ -27,3 +27,14 @@ Access the presentation [here](https://github.com/biovcnet/topic-amplicons/blob/
 
 
 
+# Lesson 2
+### Fireside chat
+
+This lesson is an informal discussion among instructors about topics such as
+* What are your preferred workflows for analyzing amplicons?
+* What are your opinions on certain caveats associated with amplicon analyses?
+
+[Watch the entire lesson](https://www.youtube.com/watch?v=egkCswqQMWM&feature=youtu.be)
+
+Or just view the answers to particular questions:
+* [How important is it to use ASVs over OTUs?](https://youtu.be/egkCswqQMWM?t=51)
