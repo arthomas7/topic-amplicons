@@ -63,12 +63,12 @@ Or just view the discussion on particular questions:
 * [Which interface do you use for running your code?](https://youtu.be/egkCswqQMWM?t=2196)
 
 * [How do you manage and store your data?](https://youtu.be/egkCswqQMWM?t=2426)
- * [SRA](https://www.ncbi.nlm.nih.gov/sra)
- * [Figshare](https://figshare.com/)
- * [Dryad](https://datadryad.org/stash)
- * [github](https://github.com/) repository
- * Zenodo[https://zenodo.org/]
- * [OSF](https://osf.io/)
+   * [SRA](https://www.ncbi.nlm.nih.gov/sra)
+   * [Figshare](https://figshare.com/)
+   * [Dryad](https://datadryad.org/stash)
+   * [github](https://github.com/) repository
+   * [Zenodo](https://zenodo.org/)
+   * [OSF](https://osf.io/)
  
 * [How do you treat your count tables to account for the way that high throughput sequencing ‘collects’ data (ie. as relative abundances rather than absolute counts)?](https://youtu.be/egkCswqQMWM?t=2908)
 
