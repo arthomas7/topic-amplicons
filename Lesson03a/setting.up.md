@@ -25,8 +25,9 @@ To set up my working environment in Discovery Environment, I followed the docume
 4. Click on the Jupyterlabs-Qiime2 app and a window will pop up.
 	- Name your analysis. I made this one `JupyterLab-Qiime2-2019.10_HappyBellyDemo`
 	- Put in comments if you want
-	- Select output folder for your analysis files. This can be in the `analysis` folder that Cyverse automatically sets up in your data store, or in another subfolder specific to the project
-	- Under `Parameters`, select the folder that we uploaded using Cyberduck, `qiime2_wd`
+	- Select output folder for your analysis files. This can be in the 'analysis` folder that Cyverse automatically sets up in your data store, or in another subfolder specific to the project
+	- Under `Input Data`, select the working directory folder that we uploaded using Cyberduck, `qiime2_wd`
+	- Under `Resource Requirements`, choose the maximum under each category: 8 CPU, 64GB memory, and 512GB disk space.
 	- Hit `Launch Analysis`
 5. Once the analysis is running, it will appear in a list if you hit the `Analyses` button. Click on it to go to the analysis.
 	- Once it's ready loading, a jupyter labs platform pops up with different notebook options.
