@@ -60,3 +60,14 @@ Or just view the discussion on particular questions:
    * [OSF](https://osf.io/)
 * [How do you treat your count tables to account for the way that high throughput sequencing ‘collects’ data (ie. as relative abundances rather than absolute counts)?](https://youtu.be/egkCswqQMWM?t=2908)
 
+
+
+
+
+# Lesson 3
+## *under development*
+Parallel tutorials replicating the amplicon analysis from [Happy Belly](https://astrobiomike.github.io/amplicon/) dataset.
+
+
+### Lesson3a Qiime2 Pipeline using DADA2
+Data and the notebook for this tutorial are [here](https://github.com/biovcnet/amplicons-lesson-3-repo/tree/master/qiime2_wd).
