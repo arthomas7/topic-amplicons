@@ -12,6 +12,6 @@ I primarily patched this together using [this tutorial](https://cyverse-jupyter-
 
 Next steps:
 
-1- [How to prepare the data for Qiime2.](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03a/organize.data.md)
-2- [How to set up the Cyverse Discovery Environment for a Qiime2 analysis using Jupyter Labs](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03a/setting.up.md)
-3- [The Qiime2 analysis example](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03a/analysis.md)
+  1- [How to prepare the data for Qiime2.](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03a/organize.data.md)
+  2- [How to set up the Cyverse Discovery Environment for a Qiime2 analysis using Jupyter Labs](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03a/setting.up.md)
+  3- [The Qiime2 analysis example](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03a/analysis.md)
