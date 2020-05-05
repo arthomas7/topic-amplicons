@@ -39,7 +39,7 @@ To set up my working environment in Discovery Environment, I followed the docume
 7. Now we are ready to start our first notebook.
 	
 	
-## Setting up a qiime2 JupyterLab in VICE
+## Setting up a QIIME2 JupyterLab in VICE
 
 <u>Some notes for this section</u>:  
 
@@ -55,17 +55,25 @@ To set up my working environment in Discovery Environment, I followed the docume
 	- Another note: qiime2 is written to be implemented in bash (which is what Terminals use). You can run bash commands in a Python environment by preceeding with a `!`. We are going to do that and use a Python notebook instead of a Bash notebook because the graphics work better. But all the commands we use here should still work in a Bash notebook.
 4. Name your notebook and start coding!
 
-- **This is important** The vice environment is *temporary* and will hold your files only while you are working. It is important to save your files by either 1) downloading them to your local computer or 2) transferring them to your Data Store (which is in the cloud but is more permanent). You can transfer them to your Data Store using iCommands (described below).
 
 
-Navigating around:
+**Navigating around:**
 
 - Like I mentioned above, the bash commands work in a Python environment as long as you use `!`. Try some standard ones like `ls` or `pwd`
 - We can also interact with the Data Store using <u>iCommands</u>, which are bash commands preceeded with an `i`. Compare output of `! ls` to `! ils`.
 	- This is useful for transferring files from your data store to you temporary environment using `iget` (or `!iget` in Python) or from your temporary environment to your Data Store using `iput` (`!iput`). Check the Jupyter lab notebook to see examples.
 
+**Backing up your work:**  
 
-Next steps: *Let's start using qiime2!!!*
+*This is important* The Vice environment is *temporary* and will hold your files only while you are working. It is important to save your files by either 1) downloading them to your local computer or 2) transferring them to your Data Store (which is in the cloud but is a more permanent place). There are multiple ways of doing this:
+
+- You can transfer files to and from your Data Store using iCommands (described above in "Navigating Around").
+- You can right click on files and download them directly to your computer.
+- From the Discovery Environment, in the `Analyses` window, there is a 3-dotted Button on the right side of each of your analyses. When you click that button, there is an option for `Complete and Save Outputs`. This will end your analysis session and send all files from the temporary environment to the 'Analysis' folder in your Data Store (or whichever folder you chose in step 4 above.
+
+
+
+**Next steps:** *Let's start using qiime2!!!*
 
   3- [The Qiime2 analysis example](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03a/analysis.md). 
 
