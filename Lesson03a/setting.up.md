@@ -4,7 +4,7 @@ With your Cyverse account credentials, you will be able to log into your data st
 
 I followed the documentation [here](https://cyverse-data-store-guide.readthedocs-hosted.com/en/latest/step1.html#download-and-first-time-configuration-of-cyberduck) and used Cyberduck as my client. There are other free options out there, such as Filezilla.
 
-Using Cyberduck, drag the entire `qiime2_wd` folder into your Cyverse username folder (ie. mine is `iplant/home/esuter`. The data transfer takes a few minutes.  
+Using Cyberduck, drag the entire `qiime2_wd` folder into your Cyverse username folder (ie. mine is `iplant/home/esuter`). The data transfer takes a few minutes.  
 
 ## Setting up a working environment in Cyverse's Discovery Environment using VICE
 For this section, we are navigating to the Discovery Environment and using [VICE](https://learning.cyverse.org/projects/vice/en/latest/), a visual interactive environment. This component of the Discovery Environment allows for *exploratory* data analysis on the cloud (rather than submitting a job and later receiving results). This is really useful when using interactive applications like JupyterLabs or RStudio and is very helpful for bioinformatics-types of analyses. VICE is set up similar to a computer's file system, so it is easy to click around and navigate.
@@ -25,7 +25,7 @@ To set up my working environment in Discovery Environment, I followed the docume
 4. Click on the Jupyterlabs-Qiime2 app and a window will pop up.
 	- Name your analysis. I made this one `JupyterLab-Qiime2-2019.10_HappyBellyDemo`
 	- Put in comments if you want
-	- Select output folder for your analysis files. This can be in the 'analysis` folder that Cyverse automatically sets up in your data store, or in another subfolder specific to the project
+	- Select output folder for your analysis files. This can be in the `analysis` folder that Cyverse automatically sets up in your data store, or in another subfolder specific to the project
 	- Under `Parameters`, select the folder that we uploaded using Cyberduck, `qiime2_wd`
 	- Hit `Launch Analysis`
 5. Once the analysis is running, it will appear in a list if you hit the `Analyses` button. Click on it to go to the analysis.
@@ -61,13 +61,13 @@ Navigating around:
 
 - Like I mentioned above, the bash commands work in a Python environment as long as you use `!`. Try some standard ones like `ls` or `pwd`
 - We can also interact with the Data Store using <u>iCommands</u>, which are bash commands preceeded with an `i`. Compare output of `! ls` to `! ils`.
-	- This is useful for transferring files from your data store to you temporary environment using `iget` (or `!iget` in Python) or from your temporary environment to your Data Store using `iput` (`iput`).
+	- This is useful for transferring files from your data store to you temporary environment using `iget` (or `!iget` in Python) or from your temporary environment to your Data Store using `iput` (`!iput`). Check the Jupyter lab notebook to see examples.
 
 
-Next steps:
+Next steps: *Let's start using qiime2!!!*
 
   3- [The Qiime2 analysis example](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03a/analysis.md). 
 
 
-*Let's start using qiime2!!!*
+
 
