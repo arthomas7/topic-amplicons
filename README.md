@@ -65,10 +65,10 @@ Or just view the discussion on particular questions:
 
 
 # Lesson 3
-## *under development*
-Parallel tutorials replicating the amplicon analysis from [Happy Belly](https://astrobiomike.github.io/amplicon/).
+## Example Pipelines for 16S rRNA Analyses *under development*
+These are tutorials replicating the amplicon analysis from [Happy Belly](https://astrobiomike.github.io/amplicon/) using different pipeline/ software combinations.
 
 
-### Lesson3a Qiime2 Pipeline using DADA2
+### Lesson3a: Qiime2 Pipeline using DADA2
 Data and the notebook for this tutorial are [here](https://github.com/biovcnet/amplicons-lesson-3-repo/tree/master/qiime2_wd).  
 Tutorials are [here](https://github.com/biovcnet/topic-amplicons/tree/master/Lesson03a).
