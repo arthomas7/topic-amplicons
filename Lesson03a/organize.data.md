@@ -58,6 +58,12 @@ Next, compress the fastq files (the .gz extension is expected by qiime2):
 gzip *.fastq
 ```
 
+Lastly, we need to modify the metadata file (`sample_info.tsv`) so that it is in the QIIME2 format.
+
+ - This was easiest for me to do manually. I just opened the .tsc file and added a row for datatype of each column (`categorical` or `numeric`)
+ - See a further description and the examples in the QIIME2 [documentation](https://docs.qiime2.org/2020.2/tutorials/metadata/)
+ 
+
 And move two directories up and compress the whole repo:
 
 ```
