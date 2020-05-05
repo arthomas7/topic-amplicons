@@ -16,7 +16,6 @@ Open a terminal window and download the Happy Belly files with the following com
 curl -L -o dada2_amplicon_ex_workflow.tar.gz https://ndownloader.figshare.com/files/15072638
 tar -xzvf dada2_amplicon_ex_workflow.tar.gz
 rm dada2_amplicon_ex_workflow.tar.gz
-
 ```
 
 Next, copy some of the files into a new working directory since we don't need all of the files from the raw directory (like the Rproject etc.)
@@ -70,4 +69,11 @@ tar -czvf qiime2_wd.tar.gz qiime2_wd/
 
 You can upload the file above to your Data Store in Cyverse (next steps in tutorial) and then decompress it using `tar -xzvf qiime2_wd.tar.gz`.
 
-I also uploaded the tutorial files to github, if you want to download it directly without going through this excercise, they are at github in the [BVCN amplicon lesson 3 repo](https://github.com/biovcnet/amplicons-lesson-3-repo). You can download the whole repo directly in your terminal or in the Cyverse environment.
+I also uploaded the tutorial files to github, if you want to download it directly without going through this excercise, they are in the [BVCN amplicon lesson 3 repo](https://github.com/biovcnet/amplicons-lesson-3-repo). You can download the whole repo directly in your terminal or in the Cyverse environment.
+
+
+Next steps:
+
+  2- [How to set up the Cyverse Discovery Environment for a Qiime2 analysis using Jupyter Labs](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03a/setting.up.md).  
+  3- [The Qiime2 analysis example](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03a/analysis.md). 
+
