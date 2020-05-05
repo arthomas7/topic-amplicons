@@ -69,7 +69,7 @@ tar -czvf qiime2_wd.tar.gz qiime2_wd/
 
 You can upload the file above to your Data Store in Cyverse (next steps in tutorial) and then decompress it using `tar -xzvf qiime2_wd.tar.gz`.
 
-I also uploaded the tutorial files to github, if you want to download it directly without going through this excercise, they are in the [BVCN amplicon lesson 3 repo](https://github.com/biovcnet/amplicons-lesson-3-repo). You can download the whole repo directly in your terminal or in the Cyverse environment.
+I also uploaded the qiime2-ready fastq files to github, if you want to download them directly without going through this excercise, they are in the [BVCN amplicon lesson 3 repo](https://github.com/biovcnet/amplicons-lesson-3-repo). You can download the whole repo directly in your terminal or in the Cyverse environment.
 
 
 Next steps:
