@@ -28,7 +28,7 @@ Access the presentation [here](https://github.com/biovcnet/topic-amplicons/blob/
 
 
 # Lesson 2
-### Coffe Hour
+### Coffee Hour
 
 This lesson is an informal discussion among instructors about topics such as
 * What are your preferred workflows for analyzing amplicons?
