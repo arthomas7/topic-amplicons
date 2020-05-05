@@ -69,11 +69,11 @@ To set up my working environment in Discovery Environment, I followed the docume
 
 - You can transfer files to and from your Data Store using iCommands (described above in "Navigating Around").
 - You can right click on files and download them directly to your computer.
-- From the Discovery Environment, in the `Analyses` window, there is a 3-dotted Button on the right side of each of your analyses. When you click that button, there is an option for `Complete and Save Outputs`. This will end your analysis session and send all files from the temporary environment to the 'Analysis' folder in your Data Store (or whichever folder you chose in step 4 above.
+- From the Discovery Environment, in the `Analyses` window, there is a 3-dotted button on the right side of each of your analyses. When you click that button, there is an option for `Complete and Save Outputs`. This will end your analysis session and send all files from the temporary environment to the 'Analysis' folder in your Data Store (or whichever folder you chose in step 4 above.
 
 
 
-**Next steps:** *Let's start using qiime2!!!*
+**Next steps:** *Let's start using QIIME2!!!*
 
   3- [The Qiime2 analysis example](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03a/analysis.md). 
 
