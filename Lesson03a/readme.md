@@ -10,3 +10,8 @@ There are several different services within Cyverse, including Atmosphere, the D
 
 I primarily patched this together using [this tutorial](https://cyverse-jupyter-qiime2.readthedocs-hosted.com/en/latest/) and [this video webinar](https://www.youtube.com/watch?time_continue=561&v=9AT2YHkduz0&feature=emb_logo) from Cyverse to set up the Qiime2 Jupyter notebook in the Cyverse environment. You can follow the Cyverse example to learn how to use the Discovery Environment and test out some of their sample notebooks using their example data, or you can follow along here where I import the Happy Belly data and start the qiime2 analysis from scratch.
 
+Next steps:
+
+1- [How to prepare the data for Qiime2.](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03a/organize.data.md)
+2- [How to set up the Cyverse Discovery Environment for a Qiime2 analysis using Jupyter Labs](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03a/setting.up.md)
+3- [The Qiime2 analysis example](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03a/analysis.md)
