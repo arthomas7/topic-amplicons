@@ -14,7 +14,7 @@ Another useful thing about VICE is that it already has several useful apps devel
 To set up my working environment in Discovery Environment, I followed the documentation and video [here](https://cyverse-jupyter-qiime2.readthedocs-hosted.com/en/latest/), but modified to use the the Happy Belly data that I uploaded to the Data Store in the previous steps (instead of using Cyverse's gut-microbiome tutorial).
 
 
-###Steps:
+### Steps:
 1. Log into Cyverse
 2. Add the Discovery Environment to your dashboard (it may be in "Available Services" instead of "My Services") and click `Launch`.
 	- This will bring you to the Discovery Environment, which looks like a computer desktop. On the lefthand side there are 3 buttons where you have access to your `Data` (which is the same data you added to your Data Store using Cyberduck), `Apps`, where we will get our JupyterLabs-Qiime2 app from, and `Analyses`, which shows you all of the analyses projects that you have completed or are currently working on.
@@ -46,7 +46,7 @@ To set up my working environment in Discovery Environment, I followed the docume
 - If you have never used Jupyter before, the [Atmosphere-Qiime2 tutorial](https://github.com/joslynnlee/qiime2-workflow-cyverse/wiki/Module:-Introduction-to-Jupyter-Notebook#welcome-to-the-jupyter-notebook) has some nice explanations of what the cells are and how to navigate around a bit.
 
 
-###Steps
+### Steps
 
 1. Close the terminal and return to the launcher.
 2. You'll notice that the data folder we directed the app to use is there!
@@ -63,5 +63,11 @@ Navigating around:
 - We can also interact with the Data Store using <u>iCommands</u>, which are bash commands preceeded with an `i`. Compare output of `! ls` to `! ils`.
 	- This is useful for transferring files from your data store to you temporary environment using `iget` (or `!iget` in Python) or from your temporary environment to your Data Store using `iput` (`iput`).
 
-Let's start using qiime2!!!
+
+Next steps:
+
+  3- [The Qiime2 analysis example](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03a/analysis.md). 
+
+
+*Let's start using qiime2!!!*
 
