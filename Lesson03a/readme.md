@@ -13,9 +13,9 @@ This lesson was primarily put together based on [this useful tutorial](https://c
 
 **Prerequirements:**
 
-- [Set up the Cyverse Discovery Environment](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03a/setting.up.md) | [Video](https://youtu.be/zNdho4gwZ9M)
 - [Prepare the Happy Belly data for QIIME2](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03a/organize.data.md)  
-  
+- [Set up the Cyverse Discovery Environment](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03a/setting.up.md) | [Video](https://youtu.be/zNdho4gwZ9M)
+
  
 **Tutorial:**
   
