@@ -11,12 +11,12 @@ The goal of this tutorial is to replicate the [amplicons analysis](https://astro
 
 This lesson was primarily put together based on [this useful tutorial](https://cyverse-jupyter-qiime2.readthedocs-hosted.com/en/latest/) and [this video webinar](https://www.youtube.com/watch?time_continue=561&v=9AT2YHkduz0&feature=emb_logo) for setting up and using the QIIME2 Jupyter notebook in the Discovery Environment. 
 
-**Prerequirements:
+**Prerequirements:**
 
-1- [Set up the Cyverse Discovery Environment](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03a/setting.up.md) | [Video](https://youtu.be/zNdho4gwZ9M)
-2- [Prepare the Happy Belly data for QIIME2](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03a/organize.data.md)  
+- [Set up the Cyverse Discovery Environment](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03a/setting.up.md) | [Video](https://youtu.be/zNdho4gwZ9M)
+- [Prepare the Happy Belly data for QIIME2](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03a/organize.data.md)  
   
  
-**Tutorial:
+**Tutorial:**
   
 [QIIME2+ DADA2 Tutorial](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03a/analysis.md) | Video
