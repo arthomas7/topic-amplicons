@@ -1,5 +1,7 @@
 ## Upload Data to Cyverse's Data Store
 
+[Video](https://youtu.be/zNdho4gwZ9M)
+
 With your Cyverse account credentials, you will be able to log into your data store, which is like a cloud storage space. 
 
 I followed the documentation [here](https://cyverse-data-store-guide.readthedocs-hosted.com/en/latest/step1.html#download-and-first-time-configuration-of-cyberduck) and used Cyberduck as my client. There are other free options out there, such as Filezilla.
