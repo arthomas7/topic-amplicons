@@ -5,6 +5,8 @@ A repository for the lessons and tutorials for the Amplicons TOPIC channel of th
 ## Prerequisites
 * [Experience with R](https://github.com/biovcnet/biovcnet.github.io/wiki/TOPIC:-R)
 * [Experience with the command line](https://github.com/biovcnet/biovcnet.github.io/wiki/2.-Using-the-Command-line)
+* [Experience with Cyverse](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03a/setting.up.md) | [Setting Up Qiime2 in Cyverse: Video tutorial](https://youtu.be/zNdho4gwZ9M)
+
 
 # Overview
 This BVCN topic will cover:
@@ -65,7 +67,7 @@ Or just view the discussion on particular questions:
 
 
 # Lesson 3 *under development*
-## Example Pipelines for 16S rRNA Analyses 
+## Pipelines for 16S rRNA Analyses 
 These are tutorials replicating the amplicon analysis from [Happy Belly](https://astrobiomike.github.io/amplicon/) using different pipeline/ software combinations.
 
 
