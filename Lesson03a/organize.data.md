@@ -80,6 +80,6 @@ Or, if you want to download the modified files directly, they are in the [BVCN a
 
 Next steps:
 
-  2- [How to set up the Cyverse Discovery Environment for a QIIME2 analysis using Jupyter Labs](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03a/setting.up.md).  
-  3- [The QIIME2 analysis example](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03a/analysis.md). 
+ - [Set up the Cyverse Discovery Environment](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03a/setting.up.md).  
+- [QIIME2+DADA2 tutorial](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03a/analysis.md). 
 
