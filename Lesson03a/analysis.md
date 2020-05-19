@@ -1,21 +1,21 @@
 ## Jump into the analysis
 
-<u>If you are following along on the VICE app in Cyverse</u>, qiime2 should already be installed, check it:
+<u>If you are following along on the VICE app in Cyverse</u>, QIIME2 should be installed. Check it (remember to use the `!` to indicate a bash command):
 
 From a Jupyter Python Notebook:
 ```
 ! qiime --help
 ```
 
-This environment also come pre-loaded with a plugin that let's us view qiime2 graphics in the notebook directly. We need to import that:
+This environment also come pre-loaded with a Python tool that let's us view qiime2 graphics in the notebook directly. We need to import that:
 
 ```
 import qiime2 as q2
 ```
 
 
-<u>If you are following along in your local terminal</u>, first you need to activate qiime:  
-(Remember, don't use the `!`. You may also have a different suffix if you are working with a different version)  
+<u>If you are following along in a terminal with a local qIIME2 installation</u>, first you need to activate QIIME2:  
+(Remember, in the terminal, you don't need the `!`. You may also have a different suffix if you are working with a different version)  :
 ```
 source activate qiime2-2020.2
 ```
@@ -26,10 +26,10 @@ qiime --help
 ```
 
 ______
-*If you are in the VICE app, the rest of the tutorial is also availabl in the Jupyter notebook...*
+*If you are in the Discovery Environment app, the rest of the tutorial is also available in the Jupyter notebook...*
 
 
-If those are working, we can start importting the fastq files:
+If those are working, we can start importing the fastq files:
 
 ```
 ! qiime tools import \
@@ -42,7 +42,7 @@ If those are working, we can start importting the fastq files:
 
 
 
-**Remove primers**: we want to call the same program as in Happy Belly, cutadapt, but call it from within qiime2 (documentation [here](https://github.com/qiime2/q2-cutadapt)). The [syntax](https://docs.qiime2.org/2020.2/plugins/available/cutadapt/?highlight=cutadapt) is a little different in qiime2 but we want to do the same thing. Here, we want to use the `trim-paired` method since these sequences are paired-end and already demulitplexed.  
+**Remove primers**: we want to call the same program as in Happy Belly, cutadapt, but call it from within QIIME2 (documentation [here](https://github.com/qiime2/q2-cutadapt)). The [syntax](https://docs.qiime2.org/2020.2/plugins/available/cutadapt/?highlight=cutadapt) is a little different in QIIME2 than in the Happy Belly tutorial, but we get as close to the same parameters as possible. Here, we want to use the `trim-paired` method since these sequences are paired-end and already demulitplexed.  
 
 I also chose to use 8 cores and this went super fast. On my local computer, I only have 2 and it takes a bit longer. 
 
