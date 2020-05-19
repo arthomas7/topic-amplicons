@@ -2,18 +2,16 @@
 
 [Video](https://youtu.be/zNdho4gwZ9M)
 
-With your Cyverse account credentials, you will be able to log into your data store, which is like a cloud storage space. 
+With your Cyverse account credentials, follow the documentation [here](https://cyverse-data-store-guide.readthedocs-hosted.com/en/latest/step1.html#download-and-first-time-configuration-of-cyberduck) to download and use Cyberduck for file transfers to/ from your Cyverse data store. 
 
-I followed the documentation [here](https://cyverse-data-store-guide.readthedocs-hosted.com/en/latest/step1.html#download-and-first-time-configuration-of-cyberduck) and used Cyberduck as my client. There are other free options out there, such as Filezilla.
-
-Using Cyberduck, drag the entire `qiime2_wd` folder into your Cyverse username folder (ie. mine is `iplant/home/esuter`). The data transfer takes a few minutes.  
+Be sure to drag data and drop files into your username folder (ie. `iplant/home/esuter`). 
 
 ## Setting up a working environment in Cyverse's Discovery Environment using VICE
 For this section, we are navigating to the Discovery Environment and using [VICE](https://learning.cyverse.org/projects/vice/en/latest/), a visual interactive environment. This component of the Discovery Environment allows for *exploratory* data analysis on the cloud (rather than submitting a job and later receiving results). This is really useful when using interactive applications like JupyterLabs or RStudio and is very helpful for bioinformatics-types of analyses. VICE is set up similar to a computer's file system, so it is easy to click around and navigate.
 
-Another useful thing about VICE is that it already has several useful apps developed by Cyverse, including an app for running Qiime2 with JupyterLabs. These apps are like virtual machines that come pre-loaded with the packages you need for your analysis. If you were to run the analysis below in your local computer, you would first need to [install qiime2](https://docs.qiime2.org/2020.2/install/) and, if you want to use JupyterLabs with qiime2 locally, that's even more complicated [finagling](https://docs.qiime2.org/2017.7/interfaces/artifact-api/).
+Another useful thing about VICE is that it already has several useful apps developed by Cyverse, including an app for running QIIME2 with JupyterLabs. These apps are like virtual machines that come pre-loaded with the packages you need for your analysis. If you were to run the analysis below in your local computer, you would first need to [install QIIME2](https://docs.qiime2.org/2020.2/install/) and run it from the Terminal. If you want to use JupyterLabs with QIIME2 locally, there's a few more [steps](https://docs.qiime2.org/2017.7/interfaces/artifact-api/).
 
-To set up my working environment in Discovery Environment, I followed the documentation and video [here](https://cyverse-jupyter-qiime2.readthedocs-hosted.com/en/latest/), but modified to use the the Happy Belly data that I uploaded to the Data Store in the previous steps (instead of using Cyverse's gut-microbiome tutorial).
+There is some the documentation from Cyverse [here](https://cyverse-jupyter-qiime2.readthedocs-hosted.com/en/latest/) on setting up the QIIME2 Vice App. Below are the specific steps I took to upload and setup the environment for analyzing the Happy Belly data.
 
 
 ### Steps:
@@ -77,7 +75,7 @@ To set up my working environment in Discovery Environment, I followed the docume
 
 **Next steps:** *Let's start using QIIME2!!!*
 
-  3- [The Qiime2 analysis example](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03a/analysis.md). 
+[QIIME2+DADA2 tutorial](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03a/analysis.md). 
 
 
 
