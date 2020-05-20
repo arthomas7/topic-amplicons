@@ -1,6 +1,6 @@
 ## Upload Data to Cyverse's Data Store
 
-[Video](https://youtu.be/zNdho4gwZ9M)
+Thi tutorial has also been recorded as a [video](https://youtu.be/zNdho4gwZ9M) tutorial.
 
 With your Cyverse account credentials, follow the documentation [here](https://cyverse-data-store-guide.readthedocs-hosted.com/en/latest/step1.html#download-and-first-time-configuration-of-cyberduck) to download and use Cyberduck for file transfers to/ from your Cyverse data store. 
 
