@@ -15,7 +15,8 @@ You will also need [the modified Happy Belly data files](https://github.com/biov
 
 The instructions for setting up these prerequirements can be found at the BVCN amplicons Lesson 3a [page](https://github.com/biovcnet/topic-amplicons/tree/master/Lesson03a).
 _____
-General workflow
+
+### General workflow
 
 1. Initial Steps
 	- Organizing your working environment
@@ -39,6 +40,7 @@ General workflow
 
 _____
 
+### Initial steps
 
 If you have been following along with the BVCN Amplicons Lesson 3a tutorial, then you should be able to see the `qiime2_wd` folder in our current environment, which has all of our fastq files in qiime2 format.
 
