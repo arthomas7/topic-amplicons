@@ -41,10 +41,10 @@ Recall the difference between running normal Python commands, bash commands (usi
 ls
 ```
 
-    [0m[01;34mDADA2_denoising_output[0m/       downloads.stderr.log
+    DADA2_denoising_output	      downloads.stderr.log
     HappyBellyqiime2Demo.ipynb    downloads.stdout.log
-    [01;34mclassified_sequences[0m/         [01;34mexport[0m/
-    demux-paired-end-trimmed.qza  [01;34mphylogeny[0m/
+    classified_sequences	      export
+    demux-paired-end-trimmed.qza  phylogeny
     demux-paired-end-trimmed.qzv  silva-132-99-515-806-nb-classifier.qza
     demux-paired-end.qza
 
@@ -93,13 +93,13 @@ _________
 ! qiime info
 ```
 
-    [32mSystem versions[0m
+    [32mSystem versions[0m
     Python version: 3.6.7
     QIIME 2 release: 2019.10
     QIIME 2 version: 2019.10.0
     q2cli version: 2019.10.0
-    [32m
-    Installed plugins[0m
+    [32m
+    Installed plugins[0m
     alignment: 2019.10.0
     composition: 2019.10.0
     cutadapt: 2019.10.0
@@ -121,12 +121,12 @@ _________
     taxa: 2019.10.0
     types: 2019.10.0
     vsearch: 2019.10.0
-    [32m
-    Application config directory[0m
-    /home/qiime2/q2cli[0m
-    [32m
-    Getting help[0m
-    To get help with QIIME 2, visit https://qiime2.org[0m
+    [32m
+    Application config directory[0m
+    /home/qiime2/q2cli[0m
+    [32m
+    Getting help[0m
+    To get help with QIIME 2, visit https://qiime2.org[0m
 
 
 In the Discovery Environment, we will also use a Python tool called qiime2. This is a pre-loaded plugin that let's us view qiime2 graphics in the notebook directly. We need to import this using python:
@@ -150,7 +150,7 @@ import qiime2 as q2
   --output-path work/demux-paired-end.qza
 ```
 
-    [32mImported qiime2_wd/qiime_import as CasavaOneEightSingleLanePerSampleDirFmt to demux-paired-end.qza[0m
+    [32mImported qiime2_wd/qiime_import as CasavaOneEightSingleLanePerSampleDirFmt to demux-paired-end.qza[0m
 
 
 ### Remove primers 
@@ -162,106 +162,6 @@ Check out how to set the parameters:
 ```python
 ! qiime cutadapt trim-paired
 ```
-
-    Usage: [34mqiime cutadapt trim-paired[0m [OPTIONS]
-    
-      Search demultiplexed paired-end sequences for adapters and remove them.
-      The parameter descriptions in this method are adapted from the official
-      cutadapt docs - please see those docs at https://cutadapt.readthedocs.io
-      for complete details.
-    
-    [1mInputs[0m:
-      [34m[4m--i-demultiplexed-sequences[0m ARTIFACT [32m[0m
-        [32mSampleData[PairedEndSequencesWithQuality][0m
-                              The paired-end sequences to be trimmed.   [35m[required][0m
-    [1mParameters[0m:
-      [34m--p-cores[0m INTEGER       Number of CPU cores to use.
-        [32mRange(1, None)[0m                                                [35m[default: 1][0m
-      [34m--p-adapter-f[0m TEXT...   Sequence of an adapter ligated to the 3' end. The
-        [32mList[Str][0m             adapter and any subsequent bases are trimmed. If a
-                              `$` is appended, the adapter is only found if it is
-                              at the end of the read. Search in forward read. If
-                              your sequence of interest is "framed" by a 5' and a
-                              3' adapter, use this parameter to define a "linked"
-                              primer - see https://cutadapt.readthedocs.io for
-                              complete details.                         [35m[optional][0m
-      [34m--p-front-f[0m TEXT...     Sequence of an adapter ligated to the 5' end. The
-        [32mList[Str][0m             adapter and any preceding bases are trimmed. Partial
-                              matches at the 5' end are allowed. If a `^`
-                              character is prepended, the adapter is only found if
-                              it is at the beginning of the read. Search in
-                              forward read.                             [35m[optional][0m
-      [34m--p-anywhere-f[0m TEXT...  Sequence of an adapter that may be ligated to the
-        [32mList[Str][0m             5' or 3' end. Both types of matches as described
-                              under `adapter` and `front` are allowed. If the
-                              first base of the read is part of the match, the
-                              behavior is as with `front`, otherwise as with
-                              `adapter`. This option is mostly for rescuing failed
-                              library preparations - do not use if you know which
-                              end your adapter was ligated to. Search in forward
-                              read.                                     [35m[optional][0m
-      [34m--p-adapter-r[0m TEXT...   Sequence of an adapter ligated to the 3' end. The
-        [32mList[Str][0m             adapter and any subsequent bases are trimmed. If a
-                              `$` is appended, the adapter is only found if it is
-                              at the end of the read. Search in reverse read. If
-                              your sequence of interest is "framed" by a 5' and a
-                              3' adapter, use this parameter to define a "linked"
-                              primer - see https://cutadapt.readthedocs.io for
-                              complete details.                         [35m[optional][0m
-      [34m--p-front-r[0m TEXT...     Sequence of an adapter ligated to the 5' end. The
-        [32mList[Str][0m             adapter and any preceding bases are trimmed. Partial
-                              matches at the 5' end are allowed. If a `^`
-                              character is prepended, the adapter is only found if
-                              it is at the beginning of the read. Search in
-                              reverse read.                             [35m[optional][0m
-      [34m--p-anywhere-r[0m TEXT...  Sequence of an adapter that may be ligated to the
-        [32mList[Str][0m             5' or 3' end. Both types of matches as described
-                              under `adapter` and `front` are allowed. If the
-                              first base of the read is part of the match, the
-                              behavior is as with `front`, otherwise as with
-                              `adapter`. This option is mostly for rescuing failed
-                              library preparations - do not use if you know which
-                              end your adapter was ligated to. Search in reverse
-                              read.                                     [35m[optional][0m
-      [34m--p-error-rate[0m PROPORTION [32mRange(0, 1, inclusive_end=True)[0m
-                              Maximum allowed error rate.           [35m[default: 0.1][0m
-      [34m--p-indels[0m / [34m--p-no-indels[0m
-                              Allow insertions or deletions of bases when
-                              matching adapters.                   [35m[default: True][0m
-      [34m--p-times[0m INTEGER       Remove multiple occurrences of an adapter if it is
-        [32mRange(1, None)[0m        repeated, up to `times` times.          [35m[default: 1][0m
-      [34m--p-overlap[0m INTEGER     Require at least `overlap` bases of overlap between
-        [32mRange(1, None)[0m        read and adapter for an adapter to be found.
-                                                                      [35m[default: 3][0m
-      [34m--p-match-read-wildcards[0m / [34m--p-no-match-read-wildcards[0m
-                              Interpret IUPAC wildcards (e.g., N) in reads.
-                                                                  [35m[default: False][0m
-      [34m--p-match-adapter-wildcards[0m / [34m--p-no-match-adapter-wildcards[0m
-                              Interpret IUPAC wildcards (e.g., N) in adapters.
-                                                                   [35m[default: True][0m
-      [34m--p-minimum-length[0m INTEGER
-        [32mRange(1, None)[0m        Discard reads shorter than specified value. Note,
-                              the cutadapt default of 0 has been overridden,
-                              because that value produces empty sequence records.
-                                                                      [35m[default: 1][0m
-      [34m--p-discard-untrimmed[0m / [34m--p-no-discard-untrimmed[0m
-                              Discard reads in which no adapter was found.
-                                                                  [35m[default: False][0m
-    [1mOutputs[0m:
-      [34m[4m--o-trimmed-sequences[0m ARTIFACT [32mSampleData[PairedEndSequencesWithQuality][0m
-                              The resulting trimmed sequences.          [35m[required][0m
-    [1mMiscellaneous[0m:
-      [34m--output-dir[0m PATH       Output unspecified results to a directory
-      [34m--verbose[0m / [34m--quiet[0m     Display verbose output to stdout and/or stderr
-                              during execution of this action. Or silence output
-                              if execution is successful (silence is golden).
-      [34m--citations[0m             Show citations and exit.
-      [34m--help[0m                  Show this message and exit.
-    
-    [33m                  There were some problems with the command:                  [0m
-    [31m[1m (1/2) Missing option "--i-demultiplexed-sequences".[0m
-    [31m[1m (2/2) Missing option "--o-trimmed-sequences".  ("--output-dir" may also be
-      used)[0m
 
 
 
@@ -293,7 +193,7 @@ Check out how to set the parameters:
 #--verbose 
 ```
 
-    [32mSaved SampleData[PairedEndSequencesWithQuality] to: demux-paired-end-trimmed.qza[0m
+    [32mSaved SampleData[PairedEndSequencesWithQuality] to: demux-paired-end-trimmed.qza[0m
 
 
 You can comment out the --verbose option to keep the notebook clean but you can run it to see the results of primer trimming. More than 99% of the sequences get trimmed for all sample files.
@@ -309,7 +209,7 @@ Qiime2 works with special 'qzv' files for data visualizations. To read a much be
 --o-visualization work/demux-paired-end-trimmed.qzv
 ```
 
-    [32mSaved Visualization to: demux-paired-end-trimmed.qzv[0m
+    [32mSaved Visualization to: demux-paired-end-trimmed.qzv[0m
 
 
 #### Visualize
@@ -319,56 +219,11 @@ Qiime2 works with special 'qzv' files for data visualizations. To read a much be
 <u>If you are working in the VICE app</u> in a Jupyter notebook, one of the benefits is that qiime2 visualization tool that we imported above. We can view the interactive plot directly in this notebook:
 
 
-```python
-ls
-```
-
-    [0m[01;34mDADA2_denoising_output[0m/       demux-paired-end.qza
-    HappyBellyqiime2Demo.ipynb    downloads.stderr.log
-    [01;34mclassified_sequences[0m/         downloads.stdout.log
-    demux-paired-end-trimmed.qza  silva-132-99-515-806-nb-classifier.qza
-    demux-paired-end-trimmed.qzv
-
 
 
 ```python
 q2.Visualization.load("demux-paired-end-trimmed.qzv")
 ```
-
-
-
-
-<div><img onload="(function(div, url){
-if (typeof require !== 'undefined') {
-    var baseURL = require.toUrl('').split('/').slice(0, -2).join('/');
-} else {
-    var baseURL = JSON.parse(
-        document.getElementById('jupyter-config-data').innerHTML
-    ).baseUrl.slice(0, -1);
-}
-url = baseURL + url;
-fetch(url).then(function(res) {
-    if (res.status === 404) {
-        div.innerHTML = 'Install QIIME 2 Jupyter extension with:<br />' +
-                        '<code>jupyter serverextension enable --py qiime2' +
-                        ' --sys-prefix</code><br />then restart your server.' +
-                        '<br /><br />(Interactive output not available on ' +
-                        'static notebook viewer services like nbviewer.)';
-    } else if (res.status === 409) {
-        div.innerHTML = 'Visualization no longer in scope. Re-run this cell' +
-                        ' to see the visualization.';
-    } else if (res.ok) {
-        url = res.url;
-        div.innerHTML = '<iframe src=\'' + url + '\' style=\'' +
-                        'width: 100%; height: 700px; border: 0;\'>' +
-                        '</iframe><hr />Open in a: <a href=\'' + url + '\'' +
-                        ' target=\'_blank\'>new window</a>'
-    } else {
-        div.innerHTML = 'Something has gone wrong. Check notebook server for' +
-                        ' errors.';
-    }
-});
-})(this.parentElement, '/qiime2/redirect?location=/tmp/qiime2-archive-z8xsels_')" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" /></div>
 
 
 
@@ -390,27 +245,6 @@ Unlike in the Happy Belly environment, where using DADA2 in R let's you control 
 !qiime dada2
 ```
 
-    Usage: [34mqiime dada2[0m [OPTIONS] COMMAND [ARGS]...
-    
-      Description: This QIIME 2 plugin wraps DADA2 and supports sequence quality
-      control for single-end and paired-end reads using the DADA2 R library.
-    
-      Plugin website: http://benjjneb.github.io/dada2/
-    
-      Getting user support: Please post to the QIIME 2 forum for help with this
-      plugin: https://forum.qiime2.org
-    
-    [1mOptions[0m:
-      [34m--version[0m    Show the version and exit.
-      [34m--citations[0m  Show citations and exit.
-      [34m--help[0m       Show this message and exit.
-    
-    [1mCommands[0m:
-      [34mdenoise-paired[0m  Denoise and dereplicate paired-end sequences
-      [34mdenoise-pyro[0m    Denoise and dereplicate single-end pyrosequences
-      [34mdenoise-single[0m  Denoise and dereplicate single-end sequences
-
-
 
 ```python
 # We are going to use the denoise-paired option. 
@@ -420,115 +254,6 @@ Unlike in the Happy Belly environment, where using DADA2 in R let's you control 
 !qiime dada2 denoise-paired 
 ```
 
-    Usage: [34mqiime dada2 denoise-paired[0m [OPTIONS]
-    
-      This method denoises paired-end sequences, dereplicates them, and filters
-      chimeras.
-    
-    [1mInputs[0m:
-      [34m[4m--i-demultiplexed-seqs[0m ARTIFACT [32mSampleData[PairedEndSequencesWithQuality][0m
-                             The paired-end demultiplexed sequences to be
-                             denoised.                                  [35m[required][0m
-    [1mParameters[0m:
-      [34m[4m--p-trunc-len-f[0m INTEGER
-                             Position at which forward read sequences should be
-                             truncated due to decrease in quality. This truncates
-                             the 3' end of the of the input sequences, which will
-                             be the bases that were sequenced in the last cycles.
-                             Reads that are shorter than this value will be
-                             discarded. After this parameter is applied there must
-                             still be at least a 20 nucleotide overlap between the
-                             forward and reverse reads. If 0 is provided, no
-                             truncation or length filtering will be performed
-                                                                        [35m[required][0m
-      [34m[4m--p-trunc-len-r[0m INTEGER
-                             Position at which reverse read sequences should be
-                             truncated due to decrease in quality. This truncates
-                             the 3' end of the of the input sequences, which will
-                             be the bases that were sequenced in the last cycles.
-                             Reads that are shorter than this value will be
-                             discarded. After this parameter is applied there must
-                             still be at least a 20 nucleotide overlap between the
-                             forward and reverse reads. If 0 is provided, no
-                             truncation or length filtering will be performed
-                                                                        [35m[required][0m
-      [34m--p-trim-left-f[0m INTEGER
-                             Position at which forward read sequences should be
-                             trimmed due to low quality. This trims the 5' end of
-                             the input sequences, which will be the bases that
-                             were sequenced in the first cycles.      [35m[default: 0][0m
-      [34m--p-trim-left-r[0m INTEGER
-                             Position at which reverse read sequences should be
-                             trimmed due to low quality. This trims the 5' end of
-                             the input sequences, which will be the bases that
-                             were sequenced in the first cycles.      [35m[default: 0][0m
-      [34m--p-max-ee-f[0m NUMBER    Forward reads with number of expected errors higher
-                             than this value will be discarded.     [35m[default: 2.0][0m
-      [34m--p-max-ee-r[0m NUMBER    Reverse reads with number of expected errors higher
-                             than this value will be discarded.     [35m[default: 2.0][0m
-      [34m--p-trunc-q[0m INTEGER    Reads are truncated at the first instance of a
-                             quality score less than or equal to this value. If
-                             the resulting read is then shorter than `[4mtrunc-len-f[0m`
-                             or `[4mtrunc-len-r[0m` (depending on the direction of the
-                             read) it is discarded.                   [35m[default: 2][0m
-      [34m--p-chimera-method[0m TEXT [32mChoices('consensus', 'pooled', 'none')[0m
-                             The method used to remove chimeras. "none": No
-                             chimera removal is performed. "pooled": All reads are
-                             pooled prior to chimera detection. "consensus":
-                             Chimeras are detected in samples individually, and
-                             sequences found chimeric in a sufficient fraction of
-                             samples are removed.           [35m[default: 'consensus'][0m
-      [34m--p-min-fold-parent-over-abundance[0m NUMBER
-                             The minimum abundance of potential parents of a
-                             sequence being tested as chimeric, expressed as a
-                             fold-change versus the abundance of the sequence
-                             being tested. Values should be greater than or equal
-                             to 1 (i.e. parents should be more abundant than the
-                             sequence being tested). This parameter has no effect
-                             if [4mchimera-method[0m is "none".           [35m[default: 1.0][0m
-      [34m--p-n-threads[0m INTEGER  The number of threads to use for multithreaded
-                             processing. If 0 is provided, all available cores
-                             will be used.                            [35m[default: 1][0m
-      [34m--p-n-reads-learn[0m INTEGER
-                             The number of reads to use when training the error
-                             model. Smaller numbers will result in a shorter run
-                             time but a less reliable error model.
-                                                                [35m[default: 1000000][0m
-      [34m--p-hashed-feature-ids[0m / [34m--p-no-hashed-feature-ids[0m
-                             If true, the feature ids in the resulting table will
-                             be presented as hashes of the sequences defining each
-                             feature. The hash will always be the same for the
-                             same sequence so this allows feature tables to be
-                             merged across runs of this method. You should only
-                             merge tables if the exact same parameters are used
-                             for each run.                         [35m[default: True][0m
-    [1mOutputs[0m:
-      [34m[4m--o-table[0m ARTIFACT [32mFeatureTable[Frequency][0m
-                             The resulting feature table.               [35m[required][0m
-      [34m[4m--o-representative-sequences[0m ARTIFACT [32mFeatureData[Sequence][0m
-                             The resulting feature sequences. Each feature in the
-                             feature table will be represented by exactly one
-                             sequence, and these sequences will be the joined
-                             paired-end sequences.                      [35m[required][0m
-      [34m[4m--o-denoising-stats[0m ARTIFACT [32mSampleData[DADA2Stats][0m
-                                                                        [35m[required][0m
-    [1mMiscellaneous[0m:
-      [34m--output-dir[0m PATH      Output unspecified results to a directory
-      [34m--verbose[0m / [34m--quiet[0m    Display verbose output to stdout and/or stderr
-                             during execution of this action. Or silence output if
-                             execution is successful (silence is golden).
-      [34m--citations[0m            Show citations and exit.
-      [34m--help[0m                 Show this message and exit.
-    
-    [33m                  There were some problems with the command:                  [0m
-    [31m[1m (1/6) Missing option "--i-demultiplexed-seqs".[0m
-    [31m[1m (2/6) Missing option "--p-trunc-len-f".[0m
-    [31m[1m (3/6) Missing option "--p-trunc-len-r".[0m
-    [31m[1m (4/6) Missing option "--o-table".  ("--output-dir" may also be used)[0m
-    [31m[1m (5/6) Missing option "--o-representative-sequences".  ("--output-dir" may
-      also be used)[0m
-    [31m[1m (6/6) Missing option "--o-denoising-stats".  ("--output-dir" may also be
-      used)[0m
 
 
 Let's choose some parameters:
@@ -559,7 +284,7 @@ I am going to get as close as I can to the same parameters used in Happy Belly:
 - --verbose will show us what's happening as it's running.
 
 
-**Note**: This is the longest step and may take a while. Here, on the cyverse computers, it took me about 20 minutes. For a larger dataset, it may take several hours or days and it may be smart to use [tmux](https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/) incase you lose connection. tmux allows your commands to keep running on the server even if you lose connection (I have not used it here on Cyverse so it's sometihng you would need to inquire with them about if you are having issues).
+**Note**: This is a long step and may take a while. Here, on the cyverse computers, it took me about 15 minutes. For a larger dataset, it may take several hours or days and it may be smart to use [tmux](https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/) incase you lose connection. tmux allows your commands to keep running on the server even if you lose connection (I have not used it here on Cyverse so it's sometihng you would need to inquire with them about if you are having issues).
 
 
 ```python
@@ -587,9 +312,9 @@ I am going to get as close as I can to the same parameters used in Happy Belly:
     3) Denoise remaining samples ....................
     4) Remove chimeras (method = consensus)
     6) Write output
-    [32mSaved FeatureTable[Frequency] to: DADA2_denoising_output/table.qza[0m
-    [32mSaved FeatureData[Sequence] to: DADA2_denoising_output/representative_sequences.qza[0m
-    [32mSaved SampleData[DADA2Stats] to: DADA2_denoising_output/denoising_stats.qza[0m
+    [32mSaved FeatureTable[Frequency] to: DADA2_denoising_output/table.qza[0m
+    [32mSaved FeatureData[Sequence] to: DADA2_denoising_output/representative_sequences.qza[0m
+    [32mSaved SampleData[DADA2Stats] to: DADA2_denoising_output/denoising_stats.qza[0m
 
 
 Let's take a look at the results 
@@ -602,43 +327,7 @@ Let's take a look at the results
   --o-visualization work/DADA2_denoising_output/denoising_stats.qzv
 ```
 
-    [32mSaved Visualization to: work/DADA2_denoising_output/denoising_stats.qzv[0m
-
-
-
-
-
-<div><img onload="(function(div, url){
-if (typeof require !== 'undefined') {
-    var baseURL = require.toUrl('').split('/').slice(0, -2).join('/');
-} else {
-    var baseURL = JSON.parse(
-        document.getElementById('jupyter-config-data').innerHTML
-    ).baseUrl.slice(0, -1);
-}
-url = baseURL + url;
-fetch(url).then(function(res) {
-    if (res.status === 404) {
-        div.innerHTML = 'Install QIIME 2 Jupyter extension with:<br />' +
-                        '<code>jupyter serverextension enable --py qiime2' +
-                        ' --sys-prefix</code><br />then restart your server.' +
-                        '<br /><br />(Interactive output not available on ' +
-                        'static notebook viewer services like nbviewer.)';
-    } else if (res.status === 409) {
-        div.innerHTML = 'Visualization no longer in scope. Re-run this cell' +
-                        ' to see the visualization.';
-    } else if (res.ok) {
-        url = res.url;
-        div.innerHTML = '<iframe src=\'' + url + '\' style=\'' +
-                        'width: 100%; height: 700px; border: 0;\'>' +
-                        '</iframe><hr />Open in a: <a href=\'' + url + '\'' +
-                        ' target=\'_blank\'>new window</a>'
-    } else {
-        div.innerHTML = 'Something has gone wrong. Check notebook server for' +
-                        ' errors.';
-    }
-});
-})(this.parentElement, '/qiime2/redirect?location=/tmp/qiime2-archive-54lwsrm9')" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" /></div>
+    [32mSaved Visualization to: work/DADA2_denoising_output/denoising_stats.qzv[0m
 
 
 
@@ -646,41 +335,6 @@ fetch(url).then(function(res) {
 ```python
 q2.Visualization.load("DADA2_denoising_output/denoising_stats.qzv")
 ```
-
-
-
-
-<div><img onload="(function(div, url){
-if (typeof require !== 'undefined') {
-    var baseURL = require.toUrl('').split('/').slice(0, -2).join('/');
-} else {
-    var baseURL = JSON.parse(
-        document.getElementById('jupyter-config-data').innerHTML
-    ).baseUrl.slice(0, -1);
-}
-url = baseURL + url;
-fetch(url).then(function(res) {
-    if (res.status === 404) {
-        div.innerHTML = 'Install QIIME 2 Jupyter extension with:<br />' +
-                        '<code>jupyter serverextension enable --py qiime2' +
-                        ' --sys-prefix</code><br />then restart your server.' +
-                        '<br /><br />(Interactive output not available on ' +
-                        'static notebook viewer services like nbviewer.)';
-    } else if (res.status === 409) {
-        div.innerHTML = 'Visualization no longer in scope. Re-run this cell' +
-                        ' to see the visualization.';
-    } else if (res.ok) {
-        url = res.url;
-        div.innerHTML = '<iframe src=\'' + url + '\' style=\'' +
-                        'width: 100%; height: 700px; border: 0;\'>' +
-                        '</iframe><hr />Open in a: <a href=\'' + url + '\'' +
-                        ' target=\'_blank\'>new window</a>'
-    } else {
-        div.innerHTML = 'Something has gone wrong. Check notebook server for' +
-                        ' errors.';
-    }
-});
-})(this.parentElement, '/qiime2/redirect?location=/tmp/qiime2-archive-bqkkblf6')" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" /></div>
 
 
 
@@ -697,43 +351,9 @@ Take a look at a summary of the remaining sequence reads (note- in the outpute o
 --o-visualization work/DADA2_denoising_output/rep_seqs.qzv \
 ```
 
-    [32mSaved Visualization to: work/DADA2_denoising_output/rep_seqs.qzv[0m
+    [32mSaved Visualization to: work/DADA2_denoising_output/rep_seqs.qzv[0m
 
 
-
-
-
-<div><img onload="(function(div, url){
-if (typeof require !== 'undefined') {
-    var baseURL = require.toUrl('').split('/').slice(0, -2).join('/');
-} else {
-    var baseURL = JSON.parse(
-        document.getElementById('jupyter-config-data').innerHTML
-    ).baseUrl.slice(0, -1);
-}
-url = baseURL + url;
-fetch(url).then(function(res) {
-    if (res.status === 404) {
-        div.innerHTML = 'Install QIIME 2 Jupyter extension with:<br />' +
-                        '<code>jupyter serverextension enable --py qiime2' +
-                        ' --sys-prefix</code><br />then restart your server.' +
-                        '<br /><br />(Interactive output not available on ' +
-                        'static notebook viewer services like nbviewer.)';
-    } else if (res.status === 409) {
-        div.innerHTML = 'Visualization no longer in scope. Re-run this cell' +
-                        ' to see the visualization.';
-    } else if (res.ok) {
-        url = res.url;
-        div.innerHTML = '<iframe src=\'' + url + '\' style=\'' +
-                        'width: 100%; height: 700px; border: 0;\'>' +
-                        '</iframe><hr />Open in a: <a href=\'' + url + '\'' +
-                        ' target=\'_blank\'>new window</a>'
-    } else {
-        div.innerHTML = 'Something has gone wrong. Check notebook server for' +
-                        ' errors.';
-    }
-});
-})(this.parentElement, '/qiime2/redirect?location=/tmp/qiime2-archive-yznhlz0j')" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" /></div>
 
 
 
@@ -741,41 +361,6 @@ fetch(url).then(function(res) {
 ```python
 q2.Visualization.load("DADA2_denoising_output/rep_seqs.qzv")
 ```
-
-
-
-
-<div><img onload="(function(div, url){
-if (typeof require !== 'undefined') {
-    var baseURL = require.toUrl('').split('/').slice(0, -2).join('/');
-} else {
-    var baseURL = JSON.parse(
-        document.getElementById('jupyter-config-data').innerHTML
-    ).baseUrl.slice(0, -1);
-}
-url = baseURL + url;
-fetch(url).then(function(res) {
-    if (res.status === 404) {
-        div.innerHTML = 'Install QIIME 2 Jupyter extension with:<br />' +
-                        '<code>jupyter serverextension enable --py qiime2' +
-                        ' --sys-prefix</code><br />then restart your server.' +
-                        '<br /><br />(Interactive output not available on ' +
-                        'static notebook viewer services like nbviewer.)';
-    } else if (res.status === 409) {
-        div.innerHTML = 'Visualization no longer in scope. Re-run this cell' +
-                        ' to see the visualization.';
-    } else if (res.ok) {
-        url = res.url;
-        div.innerHTML = '<iframe src=\'' + url + '\' style=\'' +
-                        'width: 100%; height: 700px; border: 0;\'>' +
-                        '</iframe><hr />Open in a: <a href=\'' + url + '\'' +
-                        ' target=\'_blank\'>new window</a>'
-    } else {
-        div.innerHTML = 'Something has gone wrong. Check notebook server for' +
-                        ' errors.';
-    }
-});
-})(this.parentElement, '/qiime2/redirect?location=/tmp/qiime2-archive-lxcl260q')" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" /></div>
 
 
 
@@ -788,43 +373,8 @@ And take a look at the feature table
 --o-visualization work/DADA2_denoising_output/table.qzv \
 ```
 
-    [32mSaved Visualization to: work/DADA2_denoising_output/table.qzv[0m
+    [32mSaved Visualization to: work/DADA2_denoising_output/table.qzv[0m
 
-
-
-
-
-<div><img onload="(function(div, url){
-if (typeof require !== 'undefined') {
-    var baseURL = require.toUrl('').split('/').slice(0, -2).join('/');
-} else {
-    var baseURL = JSON.parse(
-        document.getElementById('jupyter-config-data').innerHTML
-    ).baseUrl.slice(0, -1);
-}
-url = baseURL + url;
-fetch(url).then(function(res) {
-    if (res.status === 404) {
-        div.innerHTML = 'Install QIIME 2 Jupyter extension with:<br />' +
-                        '<code>jupyter serverextension enable --py qiime2' +
-                        ' --sys-prefix</code><br />then restart your server.' +
-                        '<br /><br />(Interactive output not available on ' +
-                        'static notebook viewer services like nbviewer.)';
-    } else if (res.status === 409) {
-        div.innerHTML = 'Visualization no longer in scope. Re-run this cell' +
-                        ' to see the visualization.';
-    } else if (res.ok) {
-        url = res.url;
-        div.innerHTML = '<iframe src=\'' + url + '\' style=\'' +
-                        'width: 100%; height: 700px; border: 0;\'>' +
-                        '</iframe><hr />Open in a: <a href=\'' + url + '\'' +
-                        ' target=\'_blank\'>new window</a>'
-    } else {
-        div.innerHTML = 'Something has gone wrong. Check notebook server for' +
-                        ' errors.';
-    }
-});
-})(this.parentElement, '/qiime2/redirect?location=/tmp/qiime2-archive-q6jbvg9i')" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" /></div>
 
 
 
@@ -832,42 +382,6 @@ fetch(url).then(function(res) {
 ```python
 q2.Visualization.load("DADA2_denoising_output/table.qzv")
 ```
-
-
-
-
-<div><img onload="(function(div, url){
-if (typeof require !== 'undefined') {
-    var baseURL = require.toUrl('').split('/').slice(0, -2).join('/');
-} else {
-    var baseURL = JSON.parse(
-        document.getElementById('jupyter-config-data').innerHTML
-    ).baseUrl.slice(0, -1);
-}
-url = baseURL + url;
-fetch(url).then(function(res) {
-    if (res.status === 404) {
-        div.innerHTML = 'Install QIIME 2 Jupyter extension with:<br />' +
-                        '<code>jupyter serverextension enable --py qiime2' +
-                        ' --sys-prefix</code><br />then restart your server.' +
-                        '<br /><br />(Interactive output not available on ' +
-                        'static notebook viewer services like nbviewer.)';
-    } else if (res.status === 409) {
-        div.innerHTML = 'Visualization no longer in scope. Re-run this cell' +
-                        ' to see the visualization.';
-    } else if (res.ok) {
-        url = res.url;
-        div.innerHTML = '<iframe src=\'' + url + '\' style=\'' +
-                        'width: 100%; height: 700px; border: 0;\'>' +
-                        '</iframe><hr />Open in a: <a href=\'' + url + '\'' +
-                        ' target=\'_blank\'>new window</a>'
-    } else {
-        div.innerHTML = 'Something has gone wrong. Check notebook server for' +
-                        ' errors.';
-    }
-});
-})(this.parentElement, '/qiime2/redirect?location=/tmp/qiime2-archive-9wg3vd_2')" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" /></div>
-
 
 
 ### Assign taxonomy 
@@ -913,11 +427,11 @@ Next, assign taxononomy using the SILVA classifier (this step also takes awhile.
 --o-classification taxonomy.qza
 ```
 
-    [31m[1mPlugin error from feature-classifier:
+    [31m[1mPlugin error from feature-classifier:
     
       The scikit-learn version (0.22.1) used to generate this artifact does not match the current version of scikit-learn installed (0.21.2). Please retrain your classifier for your current deployment to prevent data-corruption errors.
     
-    Debug info has been saved to /tmp/qiime2-q2cli-err-xnr152ml.log[0m
+    Debug info has been saved to /tmp/qiime2-q2cli-err-xnr152ml.log[0m
 
 
 That gave an error! It's because I downloaded the newest classifier but we are working in a slightly older version of Qiime2. If you go back to the [data resources page](https://docs.qiime2.org/2020.2/data-resources/) and switch the version (upper left corner) to 2019.10 (our current working version) and get the link for *that* v132 515F/806R classifier, it should work
@@ -950,73 +464,17 @@ That gave an error! It's because I downloaded the newest classifier but we are w
     2020-05-05 17:43:00 (41.4 MB/s) - ‘silva-132-99-515-806-nb-classifier.qza’ saved [188926431/188926431]
     
 
-
+Next let's read what the feature classifier does
 
 ```python
 ! qiime feature-classifier classify-sklearn \
 ```
 
-    Usage: [34mqiime feature-classifier classify-sklearn[0m [OPTIONS]
-    
-      Classify reads by taxon using a fitted classifier.
-    
-    [1mInputs[0m:
-      [34m[4m--i-reads[0m ARTIFACT [32mFeatureData[Sequence][0m
-                             The feature data to be classified.         [35m[required][0m
-      [34m[4m--i-classifier[0m ARTIFACT
-        [32mTaxonomicClassifier[0m  The taxonomic classifier for classifying the reads.
-                                                                        [35m[required][0m
-    [1mParameters[0m:
-      [34m--p-reads-per-batch[0m INTEGER
-        [32mRange(0, None)[0m       Number of reads to process in each batch. If "auto",
-                             this parameter is autoscaled to min( number of query
-                             sequences / [4mn-jobs[0m, 20000).              [35m[default: 0][0m
-      [34m--p-n-jobs[0m INTEGER     The maximum number of concurrently worker processes.
-                             If -1 all CPUs are used. If 1 is given, no parallel
-                             computing code is used at all, which is useful for
-                             debugging. For [4mn-jobs[0m below -1, (n_cpus + 1 + [4mn-jobs[0m)
-                             are used. Thus for [4mn-jobs[0m = -2, all CPUs but one are
-                             used.                                    [35m[default: 1][0m
-      [34m--p-pre-dispatch[0m TEXT  "all" or expression, as in "3*n_jobs". The number of
-                             batches (of tasks) to be pre-dispatched.
-                                                             [35m[default: '2*n_jobs'][0m
-      [34m--p-confidence[0m VALUE [32mFloat % Range(0, 1, inclusive_end=True) | Str %[0m
-        [32mChoices('disable')[0m   Confidence threshold for limiting taxonomic depth.
-                             Set to "disable" to disable confidence calculation,
-                             or 0 to calculate confidence but not apply it to
-                             limit the taxonomic depth of the assignments.
-                                                                    [35m[default: 0.7][0m
-      [34m--p-read-orientation[0m TEXT [32mChoices('same', 'reverse-complement', 'auto')[0m
-                             Direction of reads with respect to reference
-                             sequences. same will cause reads to be classified
-                             unchanged; reverse-complement will cause reads to be
-                             reversed and complemented prior to classification.
-                             "auto" will autodetect orientation based on the
-                             confidence estimates for the first 100 reads.
-                                                                 [35m[default: 'auto'][0m
-    [1mOutputs[0m:
-      [34m[4m--o-classification[0m ARTIFACT [32mFeatureData[Taxonomy][0m
-                                                                        [35m[required][0m
-    [1mMiscellaneous[0m:
-      [34m--output-dir[0m PATH      Output unspecified results to a directory
-      [34m--verbose[0m / [34m--quiet[0m    Display verbose output to stdout and/or stderr
-                             during execution of this action. Or silence output if
-                             execution is successful (silence is golden).
-      [34m--citations[0m            Show citations and exit.
-      [34m--help[0m                 Show this message and exit.
-    
-    [33m                  There were some problems with the command:                  [0m
-    [31m[1m (1/4) Missing option "--i-reads".[0m
-    [31m[1m (2/4) Missing option "--i-classifier".[0m
-    [31m[1m (3/4) Missing option "--o-classification".  ("--output-dir" may also be used)[0m
-    [31m[1m (4/4) Got unexpected extra argument (\)[0m
-
-
+And let's assign taxonomy.
 The cell below takes a long time to run (>1 hr)...
 
 
 ```python
-# And try to assign taxonomy again
 
 # Classify the representative sequences
 ! qiime feature-classifier classify-sklearn \
@@ -1026,7 +484,7 @@ The cell below takes a long time to run (>1 hr)...
 --verbose
 ```
 
-    [32mSaved FeatureData[Taxonomy] to: work/classified_sequences/classification.qza[0m
+    [32mSaved FeatureData[Taxonomy] to: work/classified_sequences/classification.qza[0m
 
 
 
@@ -1037,44 +495,7 @@ The cell below takes a long time to run (>1 hr)...
   --o-visualization work/classified_sequences/taxonomy.qzv
 ```
 
-    [32mSaved Visualization to: work/classified_sequences/taxonomy.qzv[0m
-
-
-
-
-
-<div><img onload="(function(div, url){
-if (typeof require !== 'undefined') {
-    var baseURL = require.toUrl('').split('/').slice(0, -2).join('/');
-} else {
-    var baseURL = JSON.parse(
-        document.getElementById('jupyter-config-data').innerHTML
-    ).baseUrl.slice(0, -1);
-}
-url = baseURL + url;
-fetch(url).then(function(res) {
-    if (res.status === 404) {
-        div.innerHTML = 'Install QIIME 2 Jupyter extension with:<br />' +
-                        '<code>jupyter serverextension enable --py qiime2' +
-                        ' --sys-prefix</code><br />then restart your server.' +
-                        '<br /><br />(Interactive output not available on ' +
-                        'static notebook viewer services like nbviewer.)';
-    } else if (res.status === 409) {
-        div.innerHTML = 'Visualization no longer in scope. Re-run this cell' +
-                        ' to see the visualization.';
-    } else if (res.ok) {
-        url = res.url;
-        div.innerHTML = '<iframe src=\'' + url + '\' style=\'' +
-                        'width: 100%; height: 700px; border: 0;\'>' +
-                        '</iframe><hr />Open in a: <a href=\'' + url + '\'' +
-                        ' target=\'_blank\'>new window</a>'
-    } else {
-        div.innerHTML = 'Something has gone wrong. Check notebook server for' +
-                        ' errors.';
-    }
-});
-})(this.parentElement, '/qiime2/redirect?location=/tmp/qiime2-archive-ib7hyys0')" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" /></div>
-
+    [32mSaved Visualization to: work/classified_sequences/taxonomy.qzv[0m
 
 
 
@@ -1082,40 +503,6 @@ fetch(url).then(function(res) {
 q2.Visualization.load("classified_sequences/taxonomy.qzv")
 ```
 
-
-
-
-<div><img onload="(function(div, url){
-if (typeof require !== 'undefined') {
-    var baseURL = require.toUrl('').split('/').slice(0, -2).join('/');
-} else {
-    var baseURL = JSON.parse(
-        document.getElementById('jupyter-config-data').innerHTML
-    ).baseUrl.slice(0, -1);
-}
-url = baseURL + url;
-fetch(url).then(function(res) {
-    if (res.status === 404) {
-        div.innerHTML = 'Install QIIME 2 Jupyter extension with:<br />' +
-                        '<code>jupyter serverextension enable --py qiime2' +
-                        ' --sys-prefix</code><br />then restart your server.' +
-                        '<br /><br />(Interactive output not available on ' +
-                        'static notebook viewer services like nbviewer.)';
-    } else if (res.status === 409) {
-        div.innerHTML = 'Visualization no longer in scope. Re-run this cell' +
-                        ' to see the visualization.';
-    } else if (res.ok) {
-        url = res.url;
-        div.innerHTML = '<iframe src=\'' + url + '\' style=\'' +
-                        'width: 100%; height: 700px; border: 0;\'>' +
-                        '</iframe><hr />Open in a: <a href=\'' + url + '\'' +
-                        ' target=\'_blank\'>new window</a>'
-    } else {
-        div.innerHTML = 'Something has gone wrong. Check notebook server for' +
-                        ' errors.';
-    }
-});
-})(this.parentElement, '/qiime2/redirect?location=/tmp/qiime2-archive-l5hooocz')" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" /></div>
 
 
 
@@ -1140,7 +527,7 @@ Next make a multiple sequence alignment with MAFFT ([documentation](https://docs
   --o-alignment phylogeny/aligned-rep-seqs.qza
 ```
 
-    [32mSaved FeatureData[AlignedSequence] to: phylogeny/aligned-rep-seqs.qza[0m
+    [32mSaved FeatureData[AlignedSequence] to: phylogeny/aligned-rep-seqs.qza[0m
 
 
 Next you want to mask the alignment, which reduces noise from ambigously aligned regions (see qiime2 link above for more detail):
@@ -1152,7 +539,7 @@ Next you want to mask the alignment, which reduces noise from ambigously aligned
   --o-masked-alignment phylogeny/masked-aligned-rep-seqs.qza
 ```
 
-    [32mSaved FeatureData[AlignedSequence] to: phylogeny/masked-aligned-rep-seqs.qza[0m
+    [32mSaved FeatureData[AlignedSequence] to: phylogeny/masked-aligned-rep-seqs.qza[0m
 
 
 Next is constructing the phylogeny. I will use fasttree here, but there are multiple options, all described in the linked QIIME2 page above.
@@ -1164,7 +551,7 @@ Next is constructing the phylogeny. I will use fasttree here, but there are mult
   --o-tree phylogeny/fasttree-tree.qza
 ```
 
-    [32mSaved Phylogeny[Unrooted] to: phylogeny/fasttree-tree.qza[0m
+    [32mSaved Phylogeny[Unrooted] to: phylogeny/fasttree-tree.qza[0m
 
 
 Next, you must root the tree in order to be able to use it in UniFrac
@@ -1176,14 +563,14 @@ Next, you must root the tree in order to be able to use it in UniFrac
   --o-rooted-tree phylogeny/fasttree-tree-rooted.qza
 ```
 
-    [32mSaved Phylogeny[Rooted] to: phylogeny/fasttree-tree-rooted.qza[0m
+    [32mSaved Phylogeny[Rooted] to: phylogeny/fasttree-tree-rooted.qza[0m
 
 
 Note that all of the steps above (mafft alignment> mask> fasttree> midpoint root) could have been run with one command, `align-to-tree-mafft-fasttree`.
 
 ### Export
 
-Next, like in Happy Belly, we want to export the major files we generated for downstream analyses: 1) the count table (aka feature table/ ASV table/ OTU table), 2) the fasta file, and 3) the taxonomy file. In addition, I will also export the tree file.
+Next, like in Happy Belly, we want to export the major files we generated for downstream analyses: 1) the count table (aka feature table/ ASV table/ OTU table), 2) the fasta file, and 3) the taxonomy file. In addition, I will also export the tree file. These are all in QIIME format (.qza files). We are going to change the format so they are useable by other applications.
 
 
 
@@ -1198,7 +585,7 @@ Next, like in Happy Belly, we want to export the major files we generated for do
   --output-path export/table
 ```
 
-    [32mExported DADA2_denoising_output/table.qza as BIOMV210DirFmt to directory export/table[0m
+    [32mExported DADA2_denoising_output/table.qza as BIOMV210DirFmt to directory export/table[0m
 
 
 The above file is in [BIOM format](http://biom-format.org/documentation/format_versions/biom-2.1.html). You may want to put in in tsv format is you are going to be using it in R
@@ -1219,7 +606,7 @@ The above file is in [BIOM format](http://biom-format.org/documentation/format_v
   --output-path export/rep-seqs.fasta
 ```
 
-    [32mExported DADA2_denoising_output/representative_sequences.qza as DNASequencesDirectoryFormat to directory export/rep-seqs.fasta[0m
+    [32mExported DADA2_denoising_output/representative_sequences.qza as DNASequencesDirectoryFormat to directory export/rep-seqs.fasta[0m
 
 
 3) Export the taxonomy file
@@ -1231,7 +618,7 @@ The above file is in [BIOM format](http://biom-format.org/documentation/format_v
   --output-path export/taxonomy
 ```
 
-    [32mExported classified_sequences/classification.qza as TSVTaxonomyDirectoryFormat to directory export/taxonomy[0m
+    [32mExported classified_sequences/classification.qza as TSVTaxonomyDirectoryFormat to directory export/taxonomy[0m
 
 
 4) And lastly the tree file
@@ -1243,7 +630,7 @@ The above file is in [BIOM format](http://biom-format.org/documentation/format_v
   --output-path export/exported-tree
 ```
 
-    [32mExported phylogeny/fasttree-tree-rooted.qza as NewickDirectoryFormat to directory export/exported-tree[0m
+    [32mExported phylogeny/fasttree-tree-rooted.qza as NewickDirectoryFormat to directory export/exported-tree[0m
 
 
 ### Save
