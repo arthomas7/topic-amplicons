@@ -150,8 +150,6 @@ import qiime2 as q2
   --output-path work/demux-paired-end.qza
 ```
 
-    [32mImported qiime2_wd/qiime_import as CasavaOneEightSingleLanePerSampleDirFmt to demux-paired-end.qza[0m
-
 
 ### Remove primers 
 We want to call the same program as in Happy Belly, cutadapt, but call it from within qiime2 (documentation [here](https://github.com/qiime2/q2-cutadapt)). The [syntax](https://docs.qiime2.org/2020.2/plugins/available/cutadapt/?highlight=cutadapt) is a little different in qiime2 but we want to do the same thing. Here, we want to use the `trim-paired` method since these sequences are paired-end and already demulitplexed.
@@ -193,7 +191,6 @@ Check out how to set the parameters:
 #--verbose 
 ```
 
-    [32mSaved SampleData[PairedEndSequencesWithQuality] to: demux-paired-end-trimmed.qza[0m
 
 
 You can comment out the --verbose option to keep the notebook clean but you can run it to see the results of primer trimming. More than 99% of the sequences get trimmed for all sample files.
@@ -208,8 +205,6 @@ Qiime2 works with special 'qzv' files for data visualizations. To read a much be
 --i-data work/demux-paired-end-trimmed.qza \
 --o-visualization work/demux-paired-end-trimmed.qzv
 ```
-
-    [32mSaved Visualization to: demux-paired-end-trimmed.qzv[0m
 
 
 #### Visualize
@@ -327,7 +322,6 @@ Let's take a look at the results
   --o-visualization work/DADA2_denoising_output/denoising_stats.qzv
 ```
 
-    [32mSaved Visualization to: work/DADA2_denoising_output/denoising_stats.qzv[0m
 
 
 
@@ -351,8 +345,6 @@ Take a look at a summary of the remaining sequence reads (note- in the outpute o
 --o-visualization work/DADA2_denoising_output/rep_seqs.qzv \
 ```
 
-    [32mSaved Visualization to: work/DADA2_denoising_output/rep_seqs.qzv[0m
-
 
 
 
@@ -372,8 +364,6 @@ And take a look at the feature table
 --i-table work/DADA2_denoising_output/table.qza \
 --o-visualization work/DADA2_denoising_output/table.qzv \
 ```
-
-    [32mSaved Visualization to: work/DADA2_denoising_output/table.qzv[0m
 
 
 
@@ -484,8 +474,6 @@ The cell below takes a long time to run (>1 hr)...
 --verbose
 ```
 
-    [32mSaved FeatureData[Taxonomy] to: work/classified_sequences/classification.qza[0m
-
 
 
 ```python
@@ -494,8 +482,6 @@ The cell below takes a long time to run (>1 hr)...
   --m-input-file work/classified_sequences/classification.qza \
   --o-visualization work/classified_sequences/taxonomy.qzv
 ```
-
-    [32mSaved Visualization to: work/classified_sequences/taxonomy.qzv[0m
 
 
 
@@ -527,7 +513,6 @@ Next make a multiple sequence alignment with MAFFT ([documentation](https://docs
   --o-alignment phylogeny/aligned-rep-seqs.qza
 ```
 
-    [32mSaved FeatureData[AlignedSequence] to: phylogeny/aligned-rep-seqs.qza[0m
 
 
 Next you want to mask the alignment, which reduces noise from ambigously aligned regions (see qiime2 link above for more detail):
@@ -539,8 +524,6 @@ Next you want to mask the alignment, which reduces noise from ambigously aligned
   --o-masked-alignment phylogeny/masked-aligned-rep-seqs.qza
 ```
 
-    [32mSaved FeatureData[AlignedSequence] to: phylogeny/masked-aligned-rep-seqs.qza[0m
-
 
 Next is constructing the phylogeny. I will use fasttree here, but there are multiple options, all described in the linked QIIME2 page above.
 
@@ -551,8 +534,6 @@ Next is constructing the phylogeny. I will use fasttree here, but there are mult
   --o-tree phylogeny/fasttree-tree.qza
 ```
 
-    [32mSaved Phylogeny[Unrooted] to: phylogeny/fasttree-tree.qza[0m
-
 
 Next, you must root the tree in order to be able to use it in UniFrac
 
@@ -562,8 +543,6 @@ Next, you must root the tree in order to be able to use it in UniFrac
   --i-tree phylogeny/fasttree-tree.qza \
   --o-rooted-tree phylogeny/fasttree-tree-rooted.qza
 ```
-
-    [32mSaved Phylogeny[Rooted] to: phylogeny/fasttree-tree-rooted.qza[0m
 
 
 Note that all of the steps above (mafft alignment> mask> fasttree> midpoint root) could have been run with one command, `align-to-tree-mafft-fasttree`.
@@ -585,8 +564,6 @@ Next, like in Happy Belly, we want to export the major files we generated for do
   --output-path export/table
 ```
 
-    [32mExported DADA2_denoising_output/table.qza as BIOMV210DirFmt to directory export/table[0m
-
 
 The above file is in [BIOM format](http://biom-format.org/documentation/format_versions/biom-2.1.html). You may want to put in in tsv format is you are going to be using it in R
 
@@ -606,7 +583,6 @@ The above file is in [BIOM format](http://biom-format.org/documentation/format_v
   --output-path export/rep-seqs.fasta
 ```
 
-    [32mExported DADA2_denoising_output/representative_sequences.qza as DNASequencesDirectoryFormat to directory export/rep-seqs.fasta[0m
 
 
 3) Export the taxonomy file
@@ -618,8 +594,6 @@ The above file is in [BIOM format](http://biom-format.org/documentation/format_v
   --output-path export/taxonomy
 ```
 
-    [32mExported classified_sequences/classification.qza as TSVTaxonomyDirectoryFormat to directory export/taxonomy[0m
-
 
 4) And lastly the tree file
 
@@ -629,8 +603,6 @@ The above file is in [BIOM format](http://biom-format.org/documentation/format_v
   --input-path phylogeny/fasttree-tree-rooted.qza \
   --output-path export/exported-tree
 ```
-
-    [32mExported phylogeny/fasttree-tree-rooted.qza as NewickDirectoryFormat to directory export/exported-tree[0m
 
 
 ### Save
