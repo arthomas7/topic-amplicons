@@ -14,11 +14,27 @@ OR
 You will also need [the modified Happy Belly data files](https://github.com/biovcnet/amplicons-lesson-3-repo) from the data store loaded into your working environment. 
 
 The instructions for setting up these prerequirements can be found at the BVCN amplicons Lesson 3a [page](https://github.com/biovcnet/topic-amplicons/tree/master/Lesson03a).
+_____
+General workflow
 
-April-May 2020   
-Liz Suter  
-BVCN
+1. Initial Steps
+	- Organizing your working environment
+	- Checking your installations
 
+2. Import fastq files into QIIME2
+3. Remove primers
+4. Check quality of trimmed reads
+5. DADA2
+	- Denoise
+	- Generate the error model
+	- Dereplicate
+	- Remove chimeras
+	- Merge reads
+	- Infer ASVs
+	- Generate the count table
+6. Assign Taxonomy
+7. Create a phylogenetic tree
+8. Export from QIIME2 and save
 
 
 _____
