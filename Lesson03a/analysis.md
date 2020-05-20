@@ -42,7 +42,7 @@ _____
 
 ### Initial steps
 
-If you have been following along with the BVCN Amplicons Lesson 3a tutorial, then you should be able to see the `qiime2_wd` folder in our current environment, which has all of our fastq files in qiime2 format.
+If you have been following along with the prerequirements and are working in Cyverse, then you should be able to see the `qiime2_wd` folder in our current environment, which has all of our fastq files in qiime2 format.
 
 
 Make a 'work' directory where all the generated files for this analysis will go. Move this notebook to that folder as well.
