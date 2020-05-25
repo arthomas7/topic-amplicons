@@ -1,7 +1,7 @@
 # QIIME2 + DADA2- Jupyter Labs Demo
 ## Amplicons Lesson 3a
 
-This is a demo of running QIIME2 in a JupyterLab in the Cyverse Discovery Environment, utilizinf DADA2 to call ASVs.
+This is a demo of running QIIME2 in a JupyterLab in the Cyverse Discovery Environment, utilizing DADA2 to call ASVs.
 
 This analysis replicates AstrobioMike's [amplicon analysis tutorial](https://astrobiomike.github.io/amplicon/dada2_workflow_ex#the-data) but by substituting a QIIME2 pipeline.  
 
@@ -235,7 +235,7 @@ Qiime2 works with special 'qzv' files for data visualizations. To read a much be
 
 
 ```python
-q2.Visualization.load("demux-paired-end-trimmed.qzv")
+q2.Visualization.load("work/demux-paired-end-trimmed.qzv")
 ```
 
 
@@ -345,7 +345,7 @@ Let's take a look at the results
 
 
 ```python
-q2.Visualization.load("DADA2_denoising_output/denoising_stats.qzv")
+q2.Visualization.load("work/DADA2_denoising_output/denoising_stats.qzv")
 ```
 
 
@@ -369,7 +369,7 @@ Take a look at a summary of the remaining sequence reads (note- in the outpute o
 
 
 ```python
-q2.Visualization.load("DADA2_denoising_output/rep_seqs.qzv")
+q2.Visualization.load("work/DADA2_denoising_output/rep_seqs.qzv")
 ```
 
 
@@ -388,7 +388,7 @@ And take a look at the feature table
 
 
 ```python
-q2.Visualization.load("DADA2_denoising_output/table.qzv")
+q2.Visualization.load("work/DADA2_denoising_output/table.qzv")
 ```
 
 
@@ -504,7 +504,7 @@ The cell below takes a long time to run (>1 hr)...
 
 
 ```python
-q2.Visualization.load("classified_sequences/taxonomy.qzv")
+q2.Visualization.load("work/classified_sequences/taxonomy.qzv")
 ```
 
 
@@ -527,8 +527,8 @@ Next make a multiple sequence alignment with MAFFT ([documentation](https://docs
 
 ```python
 ! qiime alignment mafft \
-  --i-sequences DADA2_denoising_output/representative_sequences.qza \
-  --o-alignment phylogeny/aligned-rep-seqs.qza
+  --i-sequences work/DADA2_denoising_output/representative_sequences.qza \
+  --o-alignment work/phylogeny/aligned-rep-seqs.qza
 ```
 
 
@@ -538,8 +538,8 @@ Next you want to mask the alignment, which reduces noise from ambigously aligned
 
 ```python
 ! qiime alignment mask \
-  --i-alignment phylogeny/aligned-rep-seqs.qza \
-  --o-masked-alignment phylogeny/masked-aligned-rep-seqs.qza
+  --i-alignment work/phylogeny/aligned-rep-seqs.qza \
+  --o-masked-alignment work/phylogeny/masked-aligned-rep-seqs.qza
 ```
 
 
@@ -548,8 +548,8 @@ Next is constructing the phylogeny. I will use fasttree here, but there are mult
 
 ```python
 ! qiime phylogeny fasttree \
-  --i-alignment phylogeny/masked-aligned-rep-seqs.qza \
-  --o-tree phylogeny/fasttree-tree.qza
+  --i-alignment work/phylogeny/masked-aligned-rep-seqs.qza \
+  --o-tree work/phylogeny/fasttree-tree.qza
 ```
 
 
@@ -558,8 +558,8 @@ Next, you must root the tree in order to be able to use it in UniFrac
 
 ```python
 ! qiime phylogeny midpoint-root \
-  --i-tree phylogeny/fasttree-tree.qza \
-  --o-rooted-tree phylogeny/fasttree-tree-rooted.qza
+  --i-tree work/phylogeny/fasttree-tree.qza \
+  --o-rooted-tree work/phylogeny/fasttree-tree-rooted.qza
 ```
 
 
@@ -572,14 +572,14 @@ Next, like in Happy Belly, we want to export the major files we generated for do
 
 
 ```python
-! mkdir export
+! mkdir work/export
 ```
 
 
 ```python
 ! qiime tools export \
-  --input-path DADA2_denoising_output/table.qza \
-  --output-path export/table
+  --input-path work/DADA2_denoising_output/table.qza \
+  --output-path work/export/table
 ```
 
 
@@ -588,8 +588,8 @@ The above file is in [BIOM format](http://biom-format.org/documentation/format_v
 
 ```python
 ! biom convert \
--i export/table/feature-table.biom \
--o export/table/table.tsv --to-tsv
+-i work/export/table/feature-table.biom \
+-o work/export/table/table.tsv --to-tsv
 ```
 
 2) Next export the fasta files with the representative sequences
@@ -597,8 +597,8 @@ The above file is in [BIOM format](http://biom-format.org/documentation/format_v
 
 ```python
 ! qiime tools export \
-  --input-path DADA2_denoising_output/representative_sequences.qza \
-  --output-path export/rep-seqs.fasta
+  --input-path work/DADA2_denoising_output/representative_sequences.qza \
+  --output-path work/export/rep-seqs.fasta
 ```
 
 
@@ -608,8 +608,8 @@ The above file is in [BIOM format](http://biom-format.org/documentation/format_v
 
 ```python
 ! qiime tools export \
-  --input-path classified_sequences/classification.qza \
-  --output-path export/taxonomy
+  --input-path work/classified_sequences/classification.qza \
+  --output-path work/export/taxonomy
 ```
 
 
@@ -618,8 +618,8 @@ The above file is in [BIOM format](http://biom-format.org/documentation/format_v
 
 ```python
 ! qiime tools export \
-  --input-path phylogeny/fasttree-tree-rooted.qza \
-  --output-path export/exported-tree
+  --input-path work/phylogeny/fasttree-tree-rooted.qza \
+  --output-path work/export/exported-tree
 ```
 
 
@@ -631,7 +631,7 @@ I will add my 'export' folder to my Data Store using iCommands as an example:
 
 
 ```python
-! iput -r export/ 
+! iput -r work/export/ 
 ```
 
     Running recursive pre-scan... pre-scan complete... transferring data...
