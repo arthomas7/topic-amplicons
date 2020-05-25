@@ -625,14 +625,17 @@ The above file is in [BIOM format](http://biom-format.org/documentation/format_v
 
 ### Save
 
-And that's it! Our results files are all in the 'export' folder. You can dowload these directly to your local computer by right-clicking on the folder object on the left. You can also go back to the Discovery Environment and select "Complete and Save Outputs," which will save *all* of the files you generated, including this notebook, to your 'Analyses' folder in the data store. You can also add files to your data store using the iCommands. 
+And that's it! Our results files are all in the 'export' folder. You can dowload these directly to your local computer by right-clicking on the folder object on the left. You can also go back to the Discovery Environment and select "Complete and Save Outputs," which will save these files to your 'Analyses' folder in the data store. To make sure you get everything you need, I recommend adding files to your data store using the iCommands. 
 
-I will add my 'export' folder to my Data Store using iCommands as an example:
+I will add my 'work' folder and my notebook to my Data Store using iCommands as an example:
 
 
 ```python
-! iput -r work/export/ 
+! iput -r work/ 
 ```
 
     Running recursive pre-scan... pre-scan complete... transferring data...
 
+```python
+! iput HappyBellyDemo.ipynb
+```
