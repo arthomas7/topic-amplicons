@@ -19,4 +19,4 @@ This lesson was primarily put together based on [this useful tutorial](https://c
  
 **Tutorial:**
   
-[QIIME2+ DADA2 Tutorial](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03a/analysis.md) | Video
+[QIIME2+ DADA2 Tutorial](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03a/analysis.md) | [Video](https://youtu.be/2kvdLbbKcJc)
