@@ -69,8 +69,6 @@ Or just view the discussion on particular questions:
 # Lesson 3 
 ## Title: Pipelines for 16S rRNA Analyses 
 
-Goals  
-
 *These are a set of tutorials that replicate the amplicon analysis from [Happy Belly](https://astrobiomike.github.io/amplicon/) using different pipeline/ software combinations. The tutorial from Happy Belly implements DADA2 in R and uses SILVA for taxonomy assignment.* 
 
 
