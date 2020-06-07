@@ -12,9 +12,9 @@ The goal of this tutorial is to follow-up on Lesson 03a where Dr. Liz Suter ran 
  
 **Tutorial:**
   
-[RStudio + DADA2 Tutorial]() | [Video]()
+[RStudio + DADA2 Tutorial](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03b/Amplicons_Lesson_03b.Rmd) | Video (_link coming soon_)
 
-You can find the tutorial data files [here](), which include:
+You can find the tutorial data files [here](https://github.com/biovcnet/amplicons-lesson-3-repo/tree/master/dada2_wd), which include:
 - An .Rproj file (optional)
 - The tutorial RData file (optional)
 - The DECIPHER Silva 132 database file (necessary ONLY if you want to compare to our results, otherwise the latest DECIPHER Silva 138 training set is available [here](http://www2.decipher.codes/Downloads.html))
