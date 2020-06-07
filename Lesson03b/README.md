@@ -7,7 +7,7 @@ The goal of this tutorial is to follow-up on Lesson 03a where Dr. Liz Suter ran 
 
 - If you're running RStudio on Windows you'll want to setup [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 
-- Installation of Miniconda in order to use cutadapt from the command line[Miniconda installers"](https://docs.conda.io/en/latest/miniconda.html)
+- Installation of Miniconda in order to use cutadapt from the command line [Miniconda installers](https://docs.conda.io/en/latest/miniconda.html)
 
  
 **Tutorial:**
