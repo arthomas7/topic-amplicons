@@ -79,5 +79,8 @@ Or just view the discussion on particular questions:
 * Dataset and the notebook are available in this [repo](https://github.com/biovcnet/amplicons-lesson-3-repo/tree/master).  
 
 
-### Lesson 3b: *under development* 
+### Lesson 3b: RStudio + DADA2 (and DECIPHER)
 *This tutorial implements DADA2 in R and uses DECIPHER for taxonomy assignment.*  
+* [Watch the lesson](https://youtu.be/NzHc8HFEtlw).  
+* [Follow the tutorial](https://github.com/biovcnet/topic-amplicons/tree/master/Lesson03b).  
+* Dataset and DECIPHER training set are available in this [repo](https://github.com/biovcnet/amplicons-lesson-3-repo/tree/master/dada2_wd).
