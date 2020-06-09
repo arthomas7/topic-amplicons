@@ -12,7 +12,7 @@ The goal of this tutorial is to follow-up on Lesson 03a where Dr. Liz Suter ran 
  
 **Tutorial:**
   
-[RStudio + DADA2 Tutorial](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03b/Amplicons_Lesson_03b.Rmd) | Video (_link coming soon_)
+[RStudio + DADA2 Tutorial](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson03b/Amplicons_Lesson_03b.Rmd) | [Video] (https://youtu.be/NzHc8HFEtlw)
 
 You can find the tutorial data files [here](https://github.com/biovcnet/amplicons-lesson-3-repo/tree/master/dada2_wd), which include:
 - An .Rproj file (optional)
