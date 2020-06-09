@@ -69,11 +69,11 @@ Or just view the discussion on particular questions:
 # Lesson 3 
 ## Title: Pipelines for 16S rRNA Analyses 
 
-*These are a set of tutorials that replicate the amplicon analysis from [Happy Belly](https://astrobiomike.github.io/amplicon/) using different pipeline/ software combinations. The tutorial from Happy Belly implements DADA2 in R and uses SILVA for taxonomy assignment.* 
+*These are a set of tutorials that replicate the amplicon analysis from [Happy Belly](https://astrobiomike.github.io/amplicon/) using different pipeline/ software combinations. The tutorial from Happy Belly implements DADA2 in R and uses a naive Bayes classifer for taxonomy assignment.* 
 
 
 ### Lesson3a: QIIME2 + DADA2
-*This tutorial implements DADA2 in QIIME2 and uses SILVA for taxonomy assignment.*  
+*This tutorial implements DADA2 in QIIME2 uses a naive Bayes classifer for taxonomy assignment.*  
 * [Watch the lesson](https://youtu.be/2kvdLbbKcJc).  
 * [Follow the tutorial](https://github.com/biovcnet/topic-amplicons/tree/master/Lesson03a).  
 * Dataset and the notebook are available in this [repo](https://github.com/biovcnet/amplicons-lesson-3-repo/tree/master).  
@@ -84,3 +84,6 @@ Or just view the discussion on particular questions:
 * [Watch the lesson](https://youtu.be/NzHc8HFEtlw).  
 * [Follow the tutorial](https://github.com/biovcnet/topic-amplicons/tree/master/Lesson03b).  
 * Dataset and DECIPHER training set are available in this [repo](https://github.com/biovcnet/amplicons-lesson-3-repo/tree/master/dada2_wd).
+
+# Lesson 4 
+## Title: Preparing Output from Amplicon Pipelines for Analysis *under development*
