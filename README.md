@@ -97,6 +97,9 @@ Goals
 * Normalization
 * Exporting formatted files from R
 
-Watch the [lesson]  
-Access the [tutorial](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson04/BioVCN_Amplicons_Lesson04.Rmd)
+Links
+
+* [Watch the lesson] *coming soon*
+* [Follow the tutorial](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson04/BioVCN_Amplicons_Lesson04.Rmd)
+* Input data and lesson material are available in this [repo](https://github.com/biovcnet/topic-amplicons/tree/master/Lesson04)
 
