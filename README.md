@@ -105,5 +105,17 @@ Links
 
 # Lesson 5 
 ### Title: Ordinations I *coming soon*
+R crossover tutorial, see [topic-R lesson 8](https://github.com/biovcnet/topic-R) for more. Using the output from qiime2 analysis in Lesson 4
 
 
+Goals
+
+* Import ASV table into phyloseq
+* Explore functionality of phyloseq: making tree, re-rooting tree, bar plot of taxa
+* Ordinations with phyloseq: PCoA, weighted UniFrac PCoA, NMDS
+
+Links
+
+* [Watch the lesson] *coming soon*
+* [Follow the tutorial](https://github.com/biovcnet/topic-R/blob/master/Lesson-8/lesson8.Rmd)
+* Input data and lesson material are available in this [repo](https://github.com/biovcnet/topic-R/tree/master/Lesson-8)
