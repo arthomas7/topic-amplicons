@@ -86,7 +86,7 @@ Or just view the discussion on particular questions:
 * Dataset and DECIPHER training set are available in this [repo](https://github.com/biovcnet/amplicons-lesson-3-repo/tree/master/dada2_wd).
 
 # Lesson 4 
-### Title: Preparing Output from Amplicon Pipelines for Analysis *under development*
+### Title: Preparing Output from Amplicon Pipelines for Analysis
 
 Goals
 
@@ -99,7 +99,11 @@ Goals
 
 Links
 
-* [Watch the lesson] *coming soon*
+* [Watch the lesson](https://www.youtube.com/watch?v=LJZn25EiHDo&feature=youtu.be)
 * [Follow the tutorial](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson04/BioVCN_Amplicons_Lesson04.Rmd)
 * Input data and lesson material are available in this [repo](https://github.com/biovcnet/topic-amplicons/tree/master/Lesson04)
+
+# Lesson 4 
+### Title: Ordinations I
+
 
