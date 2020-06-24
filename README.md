@@ -104,7 +104,7 @@ Links
 * Input data and lesson material are available in this [repo](https://github.com/biovcnet/topic-amplicons/tree/master/Lesson04)
 
 # Lesson 5 
-### Title: Ordinations I *coming soon*
+### Title: Ordinations I 
 R crossover tutorial, see [topic-R lesson 8](https://github.com/biovcnet/topic-R) for more. Using the output from qiime2 analysis in Lesson 4
 
 
