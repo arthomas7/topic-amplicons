@@ -103,7 +103,7 @@ Links
 * [Follow the tutorial](https://github.com/biovcnet/topic-amplicons/blob/master/Lesson04/BioVCN_Amplicons_Lesson04.Rmd)
 * Input data and lesson material are available in this [repo](https://github.com/biovcnet/topic-amplicons/tree/master/Lesson04)
 
-# Lesson 4 
-### Title: Ordinations I
+# Lesson 5 
+### Title: Ordinations I *coming soon*
 
 
