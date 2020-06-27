@@ -116,6 +116,11 @@ Goals
 
 Links
 
-* [Watch the lesson] *coming soon*
+* [Watch the lesson](https://youtu.be/OHIL1TDLLt0)
 * [Follow the tutorial](https://github.com/biovcnet/topic-R/blob/master/Lesson-8/lesson8.Rmd)
 * Input data and lesson material are available in this [repo](https://github.com/biovcnet/topic-R/tree/master/Lesson-8)
+
+
+Primary tools/programs used:
+* [phyloseq](https://joey711.github.io/phyloseq/)
+   * [Citation](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0061217)
