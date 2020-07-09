@@ -104,7 +104,9 @@ Links
 * Input data and lesson material are available in this [repo](https://github.com/biovcnet/topic-amplicons/tree/master/Lesson04)
 
 # Lesson 5 
-### Title: Ordinations I 
+## Title: Ordinations 
+ 
+### Lesson 5a: Ordinations I 
 R crossover tutorial, see [topic-R lesson 8](https://github.com/biovcnet/topic-R) for more. Using the output from qiime2 analysis in Lesson 4
 
 
@@ -112,7 +114,11 @@ Goals
 
 * Import ASV table into phyloseq
 * Explore functionality of phyloseq: making tree, re-rooting tree, bar plot of taxa
-* Ordinations with phyloseq: PCoA, weighted UniFrac PCoA, NMDS
+* Hellinger transformations
+* Ordinations with phyloseq: 
+ * PCoA with Bray-Curtis distance matrices
+ * PCoA with weighted UniFrac 
+ * NMDS with Bray-Curtis distance matrices
 
 Links
 
@@ -124,3 +130,33 @@ Links
 Primary tools/programs used:
 * [phyloseq](https://joey711.github.io/phyloseq/)
    * [Citation](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0061217)
+   
+### Lesson 5b: Ordinations II
+R crossover tutorial, see [topic-R lesson 8](https://github.com/biovcnet/topic-R) for more. 
+
+Goals
+
+* Import and manipulate ASV tables using tidyverse
+* Log-ratio transformations
+* Ordinations with vegan:
+ * Screeplots
+ * PCA plots
+ * PCoA with Jaccard and Euclidean distance matrices
+ * NMDS with Jaccard and Euclidean distance matrices
+ 
+Links
+* [Watch the lesson](https://www.youtube.com/watch?v=lSgwJBPW88k&feature=youtu.be)
+* [Follow the tutorial](https://github.com/biovcnet/topic-R/blob/master/Lesson-8b/lesson-08b-ordinationsII.R)
+* Input data and lesson material are available in this [repo](https://github.com/biovcnet/topic-R/tree/master/Lesson-8b)
+
+Primary tools/programs used:
+* [vegan](https://cran.r-project.org/web/packages/vegan/vegan.pdf)
+* [compositions](https://cran.r-project.org/web/packages/compositions/compositions.pdf)
+
+### Lesson 5c: Ordinations III
+*Continuation of lesson 5b*
+
+
+
+   
+
