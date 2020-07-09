@@ -116,9 +116,9 @@ Goals
 * Explore functionality of phyloseq: making tree, re-rooting tree, bar plot of taxa
 * Hellinger transformations
 * Ordinations with phyloseq: 
- * PCoA with Bray-Curtis distance matrices
- * PCoA with weighted UniFrac 
- * NMDS with Bray-Curtis distance matrices
+  * PCoA with Bray-Curtis distance matrices
+  * PCoA with weighted UniFrac 
+  * NMDS with Bray-Curtis distance matrices
 
 Links
 
@@ -139,10 +139,10 @@ Goals
 * Import and manipulate ASV tables using tidyverse
 * Log-ratio transformations
 * Ordinations with vegan:
- * Screeplots
- * PCA plots
- * PCoA with Jaccard and Euclidean distance matrices
- * NMDS with Jaccard and Euclidean distance matrices
+  * Screeplots
+  * PCA plots
+  * PCoA with Jaccard and Euclidean distance matrices
+  * NMDS with Jaccard and Euclidean distance matrices
  
 Links
 * [Watch the lesson](https://www.youtube.com/watch?v=lSgwJBPW88k&feature=youtu.be)
